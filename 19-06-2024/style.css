@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sign-up{
+    background-color: rgba(36, 26, 82, 0.863);
+    margin: 50px 50px 30px 50px;
+    width: 560px;
+    height: 600px;
+    box-shadow: 40px 40px 30px  rgba(97, 84, 158, 0.863) ;
+}
+h2{ 
+    padding-top: 20px;
+    text-align: center;
+    color: white;
+}
+input{
+    height: 40px;
+    margin-top: 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding-left: 10px;
+    margin-right: 10px;
+}
+input:hover{
+    font-size: large;
+    border: 3px solid black;
+}
+.address{
+    width: 535px;  
+}
+.checkbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-checkbox{
+    width: 20px;
+}
+p{
+    color: white;
+    margin-top: 20px;
+}
+.btn{
+    width: 450px;
+    margin-left: 50px;
+    background-color: gray;
+}
+.btn:hover{
+    background-color: aquamarine;
+}
+a{
+    color: white;
+}
+a:hover{
+    color: blue;
+}
+.login-hear{
+   margin-left: 110px;
+}
+.copyright{
+    padding-left: 20px;
+}
