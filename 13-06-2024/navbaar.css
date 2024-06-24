@@ -258,7 +258,7 @@ h5{
 .nav-10{
     background-color: white;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     column-gap: 5%;
 }
 .box10{
@@ -274,4 +274,16 @@ h5{
 .pera:hover{
     background-color: black;
     border-left: 3px solid rgba(13, 162, 181, 0.758);
+}
+.bed-1{
+    width: 200px;
+    height: 180px;
+    background-image: url("https://www.at-home.co.in/cdn/shop/products/Untitled-Untitled-20220730-171528.jpg?v=1659181891");
+    background-size: cover;
+}
+.bed-2{
+    width: 200px;
+    height: 180px;
+    background-image: url("https://www.furniselan.com/cdn/shop/products/baku-sheesham-wood-single-size-bed-656785_700x_crop_center.jpg?v=1679739702");
+    background-size: cover;
 }
