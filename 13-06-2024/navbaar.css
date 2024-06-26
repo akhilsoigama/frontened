@@ -60,21 +60,20 @@ a{
     text-decoration: none;
     
 }
-.btn-2{
-    width: 150px;
-}
+
 .ancors{
    height: 60px;
-   font-size: 10px;
+   font-size: 15px;
    font-weight: 600;
    display: flex;
    justify-content:flex-end;
    align-items: center; 
-   gap: 30px;
+   
    
 }
 a:hover{
     color: blue;
+   
 }
 button{
     margin-left: 8px;
@@ -82,11 +81,94 @@ button{
     width: 90px;
     background-color: white;
 }
+ul{ 
+    
+    display: flex;
+    gap: 30px;
+}
+li{
+    list-style-type: none;
+    
+
+}
+#bar-icon{
+    padding-right: 20px;
+    font-size: 30px;
+    display: none;
+}
+#click{
+    height: 20px;
+    display: none;
+}
+
+
+@media (max-width:940px) {
+    body{
+        padding: 0;
+        margin: 0;
+    }
+    .navbar{
+       
+        padding-left: 1rem;
+    }
+    ul{
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        background-color: rgb(19, 18, 18);
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        
+    }
+    
+    li{
+        margin: 40px 0;
+    }
+    a{
+        font-size: 20px;
+        transition: all 0.1s ease-in 0.1s;
+        display: block;
+        color: white;
+    }
+    
+    a:hover{
+        color: rgb(0, 255, 217);
+      
+    }
+    #bar-icon{
+        display: block;
+        padding-right: 1rem;
+    }
+    #click:checked ~ ul{
+        left: 0%;
+    }
+    #click:checked ~ .bar-icon i:before{
+          content: "\f00d";
+        
+    }
+    .menu-bar:hover{
+        cursor: pointer;
+        color: blueviolet;
+    }
+    .menu-bar:active{
+        color: red;
+    }
+    
+button:hover{
+    background-color: rgb(0, 183, 255);
+}
+}
+
 /* navbar-2 */
 .search{
     width: 160px;
     height: 30px;
     font-style: italic;
+}
+.btn-2{
+    width: 130px;
 }
 /* navbar-3 */
 .navbar-3{
@@ -126,15 +208,48 @@ button{
     grid-template-columns: 1fr 1fr;
 }
 .hr{
+    position: relative;
+    top:5px;
     width: 3px;
     height: 10px;
     background-color: black;
+}
+@media (max-width:940px) {
+      #ancors-3{
+        position: fixed;
+        top: 120px;
+       
+        
+      } 
+      .hr{
+        display: none;
+      } 
+      .navbar-3{
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }  
+    
+    
+
 }
 
 .navbar-4{
     background-color: white;
     padding-left: 10rem;
     padding-right: 5rem;
+}
+@media (max-width:940px) {
+    .navbar-4{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    #ancors-4{
+        position: fixed;
+        top: 130px;
+     }
+     #search{
+        color: white;
+     }
 }
 .navbar-5{
    display: grid;
@@ -160,6 +275,22 @@ button{
 #img-5{
     justify-content: flex-start;
 }
+@media (max-width:940px) {
+    .navbar-5{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        grid-template-columns: 1fr 1fr;
+    }
+    .sign-up{
+        gap: 1px;
+    }
+    .btn{
+        width: 60px;
+    }
+    #img-5{
+        justify-content: flex-end;
+    }
+}
 
 .navbar-6{
     display: grid;
@@ -179,6 +310,17 @@ button{
     justify-content: center;
     gap: 10px;
 }
+@media (max-width:940px) {
+    .navbar-6{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #img-6{
+        justify-content: flex-end;
+    }
+
+}
 .navbox{
     background-color: white;
     padding-left: 10rem;
@@ -188,12 +330,7 @@ button{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
-.src{
-   
-    display: flex;
-    justify-content:flex-end;
-    align-items: center;
-}
+
 #icon-7{
     justify-content: flex-start;
 }
@@ -210,10 +347,21 @@ button{
    grid-template-columns: 1.8fr 1fr;
    
 }
-.glass{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+
+@media (max-width:940px) {
+    .navbox{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+   #search{
+        color: black;
+    }
+    #icon-7{
+        gap: 5px;
+    }
+    .search{
+        width: 120px;
+    }
 }
 #ancors-8{
     display: flex;
@@ -222,6 +370,17 @@ button{
     gap: 2rem;
     
 }
+.glass{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.src{
+   
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+}
 .navhead-8{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -229,6 +388,18 @@ button{
 .box-8{
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+@media (max-width:940px) {
+    .navbox{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .src{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
 }
 .select{
     display: flex;
@@ -249,6 +420,14 @@ select{
 }
 .navbox-9{
     background-color: white;
+    
+   
+}
+@media (max-width:940px) {
+   .ancors-8{
+    justify-content: center;
+   }
+    
 }
 .pera-2{
    padding-top: 0.5rem;
