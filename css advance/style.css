@@ -12,7 +12,7 @@
     background-color: gray;
     background-blend-mode:multiply ;
     position: relative;
-    overflow:scroll;
+    overflow:hidden;
     animation: filter 5s ease-in infinite;
 }
 
