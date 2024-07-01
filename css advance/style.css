@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.bg-img{
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://images.pexels.com/photos/932638/pexels-photo-932638.jpeg?cs=srgb&dl=pexels-blaque-x-264516-932638.jpg&fm=jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: gray;
+    background-blend-mode:multiply ;
+    position: relative;
+    overflow:hidden;
+    animation: bg-filter 5s ease-in infinite;
+}
+@keyframes bg-filter {
+       100%{
+        filter: hue-rotate(360deg);
+       }
+}
+
+.logo{
+    font-size: 20px;
+    color: rgb(165, 142, 42);
+    transform: translate(50px);
+    transition: all 5s steps(5) 0.2s;
+    animation: logo-filter 2s infinite ease-in-out;
+   
+}
+@keyframes logo-filter {
+    
+    100%{
+       filter: hue-rotate(360deg);
+       transform:skew(45deg);
+       
+    }
+}
+
+.navbar{
+    width: 80%;
+    height: 15%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button{
+    width: 120px;
+    color: rgb(211, 111, 10);
+    border: 1px solid rgb(21, 191, 26);
+    background-color: transparent;
+    padding: 5px 20px;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    animation: btn-filter 0.5s infinite ease-in;
+}
+button:hover{
+    transform:scale(1.2);
+}
+@keyframes btn-filter {
+        100%{
+            filter:hue-rotate(360deg);
+            transform: scale(1.2);
+        }
+}
+.content{
+    color: rgb(186, 169, 18);
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate-y(-50%);
+    z-index: 5;
+    animation: content-filter 5s infinite linear;
+}
+@keyframes content-filter {
+      100%{
+        filter: hue-rotate(360deg);
+        transform: translate(50px);
+        text-decoration: underline;
+      }
+    
+}
+
+
+h1{
+    font-size: 80px;
+    margin: 10px 0 30px;
+    line-height: 80px;
+}
+.side-bar{
+    width: 50px;
+    height: 100vh;
+    background: rgba(36, 29, 29, 0.395);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#menu-bar{
+    color: white;
+    display: block;
+    width: 25px;
+    margin: 40px auto 0;
+}
+.social-links i,.useful-links i{
+    color: white;
+    width: 25px;
+    margin: 10px auto 0 10px;
+    cursor: pointer;
+}
+.social-links{
+    width: 50px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.useful-links{
+    width: 50px;
+    text-align: center;
+    position: absolute;
+    bottom:30px;
+}
+.blb{
+    width: 40px;
+    height: 40px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzAt7FfRWHf-fS0DpGXmBvt8kgWB5ER0aR4xeQcrgOarpX19at930wWec3DNtvzxflLvU&usqp=CAU");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    opacity: 0.3; 
+    animation: bubbels 8s linear infinite;  
+}
+.bubbels{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    justify-content: space-around;
+    align-items: center;
+}
+@keyframes bubbels {
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.7;
+       
+    }
+    75%{
+        opacity: 0.8;
+    }
+    100%{
+        transform: translatey(-80vh);
+        opacity: 0;
+    }
+}
+.bubbels .blb:nth-child(1){
+    width: 25px;
+    height: 25px;
+    animation-delay: 0.2s;
+}
+.bubbels .blb:nth-child(2){
+    width: 50px;
+    height: 50px;
+    animation-delay: 0.8s;
+}
+.bubbels .blb:nth-child(3){
+    width: 30px;
+    height: 30px;
+    animation-delay: 3s;
+}
+.bubbels .blb:nth-child(4){
+    width: 15px;
+    height: 15px;
+    animation-delay: 1.7s;
+}
+.bubbels .blb:nth-child(5){
+    width: 45px;
+    height: 45px;
+    animation-delay: 4s;
+}
+.bubbels .blb:nth-child(6){
+    width: 22px;
+    height: 22px;
+    animation-delay: 1.9s;
+}
+.bubbels .blb:nth-child(7){
+    width: 35px;
+    height: 35px;
+    animation-delay: 5s;
+}
+.bubbels .blb:nth-child(8){
+    width: 20px;
+    height: 20px;
+    animation-delay: 6s;
+}
+.bubbels .blb:nth-child(9){
+    width: 45px;
+    height: 45px;
+    animation-delay: 0.2s;
+}
+@media (max-width:700px) {
+    h1{
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .logo{
+        justify-content: flex-start;
+        font-size: 15px;
+    }
+    .bubbels{
+        width: 80%;
+    }
+    
+}
+@media (max-width:500px) {
+    .navbar{
+        display: block;
+        position: absolute;
+        top: 2rem;
+        left: 1rem;
+    }
+    .sign-up{
+        margin-top: 1rem;
+    }
+}
