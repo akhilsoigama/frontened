@@ -13,14 +13,29 @@
     background-blend-mode:multiply ;
     position: relative;
     overflow:hidden;
-    animation: filter 5s ease-in infinite;
+    animation: bg-filter 5s ease-in infinite;
+}
+@keyframes bg-filter {
+       100%{
+        filter: hue-rotate(360deg);
+       }
 }
 
 .logo{
     font-size: 20px;
     color: rgb(165, 142, 42);
-    transition: all 1s ease-in 0.2s;
-    animation: filter 2s infinite ease-in-out;
+    transform: translate(50px);
+    transition: all 5s steps(5) 0.2s;
+    animation: logo-filter 2s infinite ease-in-out;
+   
+}
+@keyframes logo-filter {
+    
+    100%{
+       filter: hue-rotate(360deg);
+       transform:skew(45deg);
+       
+    }
 }
 
 .navbar{
@@ -42,10 +57,16 @@ button{
     outline: none;
     cursor: pointer;
     transition: all 0.3s ease-in;
-    animation: filter 1s infinite ease-in;
+    animation: btn-filter 0.5s infinite ease-in;
 }
 button:hover{
     transform:scale(1.2);
+}
+@keyframes btn-filter {
+        100%{
+            filter:hue-rotate(360deg);
+            transform: scale(1.2);
+        }
 }
 .content{
     color: rgb(186, 169, 18);
@@ -54,15 +75,18 @@ button:hover{
     left: 5%;
     transform: translate-y(-50%);
     z-index: 5;
-    animation: filter 5s infinite ease-in;
+    animation: content-filter 5s infinite linear;
+}
+@keyframes content-filter {
+      100%{
+        filter: hue-rotate(360deg);
+        transform: translate(50px);
+        text-decoration: underline;
+      }
+    
 }
 
-@keyframes filter {
-     100%{
-        filter: hue-rotate(360deg);
-        
-     }
-}
+
 h1{
     font-size: 80px;
     margin: 10px 0 30px;
