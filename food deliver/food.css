@@ -94,20 +94,22 @@
 }
 .second-nav{
     width: 100%;
-    height: 100%;
+    height: 400px;
     background-color: #ffae00;
     overflow: hidden;
 }
 .header-2{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(550px,1fr));
     position: relative;
+    gap: 40px;
 }
 .header-img{
     width: 400px;
     height: 300px;
     overflow: hidden;
     position: relative;
+    top: 40%;
     left: 200px;
 }
 .img-header{
@@ -125,9 +127,169 @@
 .search-info{
     position: relative;
     top: 30%;
-    left: 20%;
+    left: 30%;
+    z-index: 2;
+    line-height: 30px;
 }
 h1{
     color: white;
     font-size: 50px;
+}
+.food-delivery{
+    background-color: white;
+    width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+hr{
+    position: relative;
+    top: 20px;
+}
+.food-search2{
+    display: flex;
+    margin-top: 50px;
+    gap: 10px;
+}
+.enter-address{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(231, 235, 239);
+    padding-left: 10px;
+    gap: 15px;
+    border-radius: 5px;
+}
+input{
+    width: 400px;
+    height: 40px;
+    border: none;
+    background-color: rgb(231, 235, 239);
+}
+.find-food{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    background-color: rgba(207, 33, 33, 0.785);
+    border: none;
+    border-radius: 5px;
+}
+.delivery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 120px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    color: rgba(249, 38, 38, 0.831);
+    font-weight: 800;
+    background-color: rgb(245, 234, 220);
+}
+.buttons{
+    display: flex;
+}
+.deliver-icon{
+    width: 27px;
+    height: 18px;
+    background-image: url("./delivery icon.png");
+    background-size: cover;
+}
+.pickup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    width: 120px;
+    height: 30px;
+    margin-left: 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 800;
+}
+.pickup-icon{
+    width: 16px;
+    height: 18px;
+    background-image: url("./pickup\ icon.png");
+}
+@media (max-width:1100px) {
+     .search-info{
+        top: 10%;
+        left: 10%;
+     }
+     .second-nav{
+        overflow: hidden;
+        height: auto;
+     }
+     .header-img{
+        top: -5%;
+     }
+}
+@media (max-width:670px) {
+    .food-delivery{
+        width: 300px;
+    }
+    input{
+        width: auto;
+    }
+    .header-img{
+        left: 10%;
+        overflow: visible;
+    }
+    .header-2{
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width:430px) {
+    h1{
+        font-size: 40px;
+    }
+}
+@media (max-width:400px) {
+      .img-header{
+        width: 300px;
+        height: 300px;
+        background-position: bottom;
+      }
+      .header-2{
+        grid-template-columns: 350px;
+      }
+      .buttons{
+        display: block;
+      }
+      .pickup{
+        margin: 10px 0px;
+      }
+      .food-search2{
+        display: block;
+      }
+      .food-delivery{
+        width: 220px;
+        padding: 10px 0px 10px 10px;
+        height: auto;
+      }
+      .find-food{
+        height: 30px;
+      }
+     
+}
+@media (max-width:350px) {
+    .search-info{
+        left: 10%;
+        width: 150px;
+      }
+      .find-food{
+        height: 30px;
+      }
+      .header-img{
+        left: 0;
+      }
+      .header-2{
+        grid-template-columns: 250px;
+      }
 }
