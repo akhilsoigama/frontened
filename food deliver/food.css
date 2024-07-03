@@ -270,7 +270,7 @@ input{
       }
       .food-delivery{
         width: 220px;
-        padding: 10px 0px 10px 10px;
+        padding: 10px 10px 10px 10px;
         height: auto;
       }
       .find-food{
@@ -291,5 +291,16 @@ input{
       }
       .header-2{
         grid-template-columns: 250px;
+      }
+      input{
+        width: 120px;
+      }
+      .enter-address{
+        width: 180px;
+        gap:5px;
+        justify-content: flex-start;
+      }
+      .food-search2{
+        gap: 5px;
       }
 }
