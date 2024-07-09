@@ -8,6 +8,7 @@
     height: auto;
     left: -2;
     gap: 80px;
+    overflow: hidden;
 }
 .top-nav{
     width: 100%;
@@ -381,22 +382,27 @@ h4{
     text-align: center;
 }
 .img-slide1{
-    width: 50px;
-    height: 50px;
+    width: 76px;
+    height: 76px;
     background-image: url("./images/Arrow\ Left.png");
     background-size: cover;
     cursor: pointer;
     border-radius: 92px;
+    position: relative;
+    top: 5px;
+   
 }
 .img-slide1:hover{
     transform: scale(1.2);
 }
 .img-slide2{
-    width: 50px;
-    height: 50px;
+    width: 76px;
+    height: 76px;
     background-image: url("./images/Arrow\ Right.png");
     background-size: cover;
     cursor: pointer;
+    position: relative;
+    top: 5px;
 }
 .img-slide2:hover{
     transform: scale(1.2);
@@ -666,15 +672,19 @@ h4{
     background-image: url("./images/Icon\ \(5\).png");
     background-size: cover;
 }
+/* search by food */
 .search-by-food{
+    width: 100%;
+    height: 350px;
+    background-image: linear-gradient(to  bottom,rgba(255,206,103,0.1) 29%,rgba(253,237,202,0.2) 0%);
     position: relative;
     top: 150px;
 }
 .btn{
     border: none;
-    color: #f65900;
+    color: #ffb30e;
     display: flex;
-    background-color: #f17228;
+    gap: 10px;
     justify-content: center;
     align-items: center;
 }
@@ -692,15 +702,172 @@ h4{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
-.arrow-2{
-    width: 6px;
-    height: 10px;
-    background-image: url("./images/Icon\ \(5\).png");
+.foods-images{
+     width: 90%;
+     display: grid;
+     grid-template-columns: repeat(auto-fit,minmax(158px,1fr));
+     gap: 10px;
+     position: relative;
+     left: 80px;
+}
+.images1, .images2, .images3, .images4, .images5, .images6{
+   width: 80%;
+   height: 190px;
+   text-align: center;
+   line-height: 40px;
+   position: relative;
+   top: 50px;
+}
+.img-foot-name{
+    font-size: 12px;
+    font-weight: 600;
+}
+.image-1,.image-2,.image-3,.image-4,.image-5,.image-6{
+    width: 158px;
+    height: 158px;
+    border-radius: 144px;
     background-size: cover;
-    background-color: #f17228;
-    background-blend-mode: multiply;
 }
+.image-1{
+    background-image: url("./images/Image\ \(7\).png");
+}
+.image-2{
+    background-image: url("./images/Image\ \(8\).png");
+}
+.image-3{
+    background-image: url("./images/Image\ \(9\).png");
+}
+.image-4{
+    background-image: url("./images/Image\ \(10\).png");
+}
+.image-5{
+    background-image: url("./images/Food\ Photo\ \(3\).png");
+}
+.image-6{
+    background-image: url("./images/Food\ Photo\ \(4\).png");
+}
+.track-delivery{
+    width: 100%;
+    height: 350px;
+    background-color:#feefd0;
+    position: relative;
+    top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.track-icons{
+    width: 900px;
+    height: 200px;
+    background-color: #ffffff;
+    border-radius: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+.NAME{
+    font-size: 20px;
+    font-weight: 700;
+    color: #f38211;
+}
+.hr{
+    top: 10px;
+    height: 80px;
+}
+.daily-discount,.live-tracking,.quick-delivery{
+     width: 136px;
+     height: 136px;
+     background-size: cover;
+     display: flex;
+     justify-content: space-between;
+    
+}
+.daily-discount{
+    background-image: url("./images/Icon\ \(6\).png");
+}
+.live-tracking{
+    background-image: url("./images/icon-track.png");
+}
+.quick-delivery{
+    background-image: url("./images/Icon\ \(7\).png");
+}
+/* install -app */
+.install{
+    width: 100%;
+    height: 490;
+    background-color:#feefd0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.mobile-img{
+    width: 602px;
+    height: 763px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 100px;
+    right: 150px;
+}
+.mobile-1{
+    width: 320px;
+    height: 556px;
+    background-image: url("./images/shadow-2.png");
+    background-size: cover;
+    position: relative;
+    top: 150px;
+}
+.mobile-2{
+    width: 450px;
+    height: 563px;
+    background-image: url("./images/Shadow.png");
+    background-size: cover;
+    position: relative;
+    z-index: 3;
+    right: 20px;
+}
+.install-app{
+    width: 350px;
+    position: relative;
+    top: 150px;
+    left: 100px;  
+}
+.app{
+    font-size: 50px;
+    color: #f17228;
+    height: 70px;
+}
+.small-pera{
+    opacity: 0.7;
+    font-size: 15px;
+}
+.downlode{
+    width: 300px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    top: 20px;
+}
+.google-play{
+   width: 150px;
+   height: 40px;
+   background: url("./images/Google\ Play\ Download.png");
+   background-size: cover;
+}
+.app-store{
+    width: 150px;
+    height: 40px;
+    background-image: url("./images/App\ Store\ Download\ Button.png");
+    background-size: cover;
+}
+
 @media (max-width:1440px) {
     .search-info{
         top: 100px;
@@ -721,9 +888,7 @@ h4{
     }
     .write{
         text-align: center;
-    }
-    
-    
+    }   
 }
 @media (max-width:1390px) {
     .hero-section{
