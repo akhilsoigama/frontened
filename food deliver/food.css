@@ -469,7 +469,7 @@ h4{
     gap: 10px;
     transition: all 0.8s ease-in-out;
 
-
+}
 .img-slide1:hover{
     transform: scale(1.2);
 }
