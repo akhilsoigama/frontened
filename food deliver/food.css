@@ -257,7 +257,6 @@ input{
    display: flex;
    justify-content: center;
    align-items: center;
-    margin: 3rem 8rem 5rem 15rem;
 
 }
 .food-section{
@@ -266,10 +265,8 @@ input{
     display: flex;
     justify-content: center;
     align-items: center;
-
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(230px,230px));
-
     column-gap: 10px; 
     row-gap: 20px; 
 }
@@ -346,6 +343,7 @@ sub{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 3rem 0 0 0;
 }
 h4{
     text-align: center;
@@ -358,16 +356,10 @@ h4{
     top: 30px;
 }
 .food-order{
-
     margin: 5rem 0 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    margin: 8rem 0rem 0 10rem;
-    top: 80px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,300px));
 
 }
 .location-img{
@@ -426,8 +418,6 @@ h4{
 .templets{
     overflow: hidden;
 
-    margin: 3rem 2rem 0 2rem;
-
 }
 .title{
     color: black;
@@ -479,24 +469,21 @@ h4{
 }
 
 .cards{
-    width: 80%;
+    width: 100%;
     height: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,200px));
-    column-gap: 10px;
-    row-gap: 40px;
-    overflow: hidden;
-    margin: 5rem 3rem 0rem 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   
 
 }
 .foods{
     width: 200px;
     height: 300px;
-
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    
+    justify-content: space-between;  
 }
 .image{
     width: 100%;
@@ -569,8 +556,7 @@ h4{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 4rem 0 0 0;
-    padding: 0 0 0 8rem;
+    margin: 5rem 0 0 0;
 }
 .title-restaurant{
     color: black;
@@ -579,17 +565,13 @@ h4{
 }
 .images-food{
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,300px));  
-    gap: 15px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
     margin: 3rem 0 0 0;
-
-    margin: 3rem 0 0 5rem;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,300px));
-    gap: 15px;
-
 }
 .images{
     width: 285px;
@@ -698,7 +680,7 @@ h4{
 }
 .name{
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 700;
 }
 #star{
     color: #ffae00;
@@ -854,8 +836,6 @@ h4{
     width: 100%;
     height: 350px;
     background-color:#feefd0;
-    position: relative;
-    top: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -877,7 +857,6 @@ h4{
     color: #f38211;
 }
 .hr{
-    top: 10px;
     height: 80px;
 }
 .daily-discount,.live-tracking,.quick-delivery{
@@ -913,17 +892,12 @@ h4{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    top: 100px;
-    right: 150px;
 }
 .mobile-1{
     width: 320px;
     height: 556px;
     background-image: url("./images/shadow-2.png");
     background-size: cover;
-    position: relative;
-    top: 150px;
 }
 .mobile-2{
     width: 450px;
@@ -932,13 +906,10 @@ h4{
     background-size: cover;
     position: relative;
     z-index: 3;
-    right: 20px;
 }
 .install-app{
     width: 350px;
-    position: relative;
-    top: 150px;
-    left: 100px;  
+    position: relative; 
 }
 .app{
     font-size: 50px;
@@ -954,8 +925,6 @@ h4{
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
-    position: relative;
-    top: 20px;
 }
 .playstore-logo{
     width: 35px;
