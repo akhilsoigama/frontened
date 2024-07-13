@@ -1202,17 +1202,97 @@ footer{
     color: white;
     display: flex;
     justify-content: space-between;
+    gap: 30px;
     align-items: center;
     flex-wrap: wrap;
 }
 .foot-pera{
     height: 20px;
     font-size: 10px;
+    font-weight: 600;
+    opacity: 0.8;
     text-transform: capitalize;
     color: white;
 }
 .foot-hr{
     margin: 3rem 0 3rem 0;
+}
+.foot-email{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
+}
+.follow{
+    font-size: 18px;
+    font-weight: 700;
+    opacity: 0.7;
+}
+.social-media-link{
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    opacity: 0.7;
+}
+.mailbox-pera{
+    opacity: 0.7;
+    font-weight: 700;
+    font-size: 14px;
+    word-spacing: 5px;
+}
+.input-email{
+    width: 270px;
+    height: 40px;
+    background-color: rgba(66, 66, 66, 1);
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+}
+.email{
+    height: 40px;
+    width: 250px;
+    background-color: rgba(66, 66, 66, 1);
+    font-size: 13px;
+}
+#mail-box{
+    opacity: 0.6;
+}
+.email-address{
+    display: flex;
+    gap: 10px;
+}
+.Subscribe{
+    width: 130px;
+    height: 40px;
+    border: none;
+    font-size: 11px;
+    color: white;
+    border-radius: 8px;
+    font-weight: 700;
+    background-image: linear-gradient(rgba(255,184,0,1),rgba(255,138,0,1));
+    box-shadow: 0px 14px 32px rgba(255, 178, 14, 0.29),0px 5px 8px rgba(222, 151, 0, 0.24);
+}
+.foot-hr2{
+    margin: 2rem 0 10px 0;
+}
+.foot{
+    display: flex;
+    justify-content: space-between;
+}
+.copy,.made{
+    display: flex;
+    gap: 10px;
+    color: white;
+    font-size: 10px;
+}
+.fa-heart{
+    color: #ffae00;
 }
 
 @media (max-width:1440px) {
