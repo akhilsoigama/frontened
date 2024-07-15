@@ -1167,7 +1167,7 @@ h4{
     align-items: center;
     flex-direction: column;
     gap: 20px;
-    z-index: 15;
+    z-index: 4;
 }
 .proseed-btn{
     width: 200px;
@@ -1266,6 +1266,7 @@ footer{
 .email-address{
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
 .Subscribe{
     width: 130px;
@@ -1284,17 +1285,25 @@ footer{
 .foot{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 .copy,.made{
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
     color: white;
     font-size: 10px;
 }
 .fa-heart{
     color: #ffae00;
 }
-
+.input-email{
+    width: 100%;
+}
+.email{
+    width: 100%;
+}
 @media (max-width:1440px) {
     .search-info{
         top: 100px;
@@ -1497,6 +1506,9 @@ footer{
     .crispy-img,.spicy-img,.chicken-img{
         width: 550px;
         height: 300px;
+    }
+    footer{
+        padding: 1rem;
     }
 }
 @media (max-width:670px) {
@@ -1708,4 +1720,5 @@ footer{
         width: 200px;
         height: 200px;
     }
+    .
 }
