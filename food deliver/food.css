@@ -20,6 +20,7 @@
     justify-content: center;
     align-items: center;
     position: fixed;
+    gap: 20px;
     z-index: 13;
 }
 .logo{ 
@@ -462,11 +463,12 @@ h4{
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    overflow: hidden;
+    overflow: auto;
     margin: 5rem 0 0 0;
     gap: 10px;
     transition: all 0.8s ease-in-out;
-
+    scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 .img-slide1:hover{
     transform: scale(1.2);
@@ -750,7 +752,7 @@ h4{
 .search-by-food{
     width: 100%;
     height: 100%;
-    background-color: rgba(254, 250, 241, 1) ;
+    background-color: #ffff ;
     margin: 5rem 0 0 0;
     
 }
@@ -859,7 +861,7 @@ h4{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 5rem 0 3rem 0;
+    padding: 5rem 0 5rem 0;
     box-shadow: 0px 27px 82px rgba(255, 174, 0, 0.28), 0px 14px 15px rgba(255, 174, 0, 0.01);
 }
 .track-icons{
@@ -892,7 +894,6 @@ h4{
      background-size: cover;
      display: flex;
      justify-content: space-between;
-     flex-wrap: wrap;
     
 }
 .daily-discount{
@@ -904,120 +905,7 @@ h4{
 .quick-delivery{
     background-image: url("./images/Icon\ \(7\).png");
 }
-/* install -app 
-.install{
-    width: 100%;
-    height: 590px;
-    background-color:#feefd0;
-    overflow: hidden;
-    background-image: linear-gradient(rgba(255, 174, 0, 1),rgba(255, 138, 0, 1));
-    margin: 5rem 0 0 0;
-}
-.install-app{
-    width: 400px;
-    height: 400px;
-    position: relative; 
-    z-index: 13;
-}
-.long-width{
-    width: 100%;
-    height: 590px;
-    background-image: url("./images/Background\(1\).png");
-    background-size: cover;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.mobile-img{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    position: relative;
-    top: 50px;
-}
-.mobile-1{
-    width: 320px;
-    height: 656px;
-    background-image: url("./images/Shadow.png");
-    background-size: cover;
-    position: relative;
-    z-index: 10;
-    top: 60px;
-} 
-.mobile-2{
-    width: 329px;
-    height: 663px;
-    background-image: url("./images/shadow-2.png");
-    background-size: cover;
-    object-fit: cover;
-    position: relative;
-    right: 50px;
-    z-index: 10;
-}
-.app{
-    font-size: 50px;
-    color: #f17228;
-    height: 70px;
-}
-.small-pera{
-    opacity: 0.7;
-    font-size: 15px;
-}
-.apps-button{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;
-}
-.playstore-logo{
-    width: 35px;
-    height: 39px;
-    background-image: url("./images/Google\ Play\ logo.png");
-    background-size: cover;
-}
-.play-store{
-    width: 180px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 5px;
-    border: none;
-    box-shadow: 0px 20px 40px rgba(255, 174, 0, 0.29),0px 5px 10px rgba(255, 174, 0, 0.26);
-}
-.get-it-on{
-    font-size: 10px;
-    text-align: left;
-}
-.download-on{
-    font-size: 10px;
-    text-align: left
-}
-.google{
-    font-size: 20px;
-}
-.app-store{
-    width: 180px;
-    height: 50px;
-    border: none;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    box-shadow: 0px 20px 40px rgba(255, 174, 0, 0.29),0px 5px 10px rgba(255, 174, 0, 0.26);
-
-}
-.appstore-logo{
-    width: 27px;
-    height: 33px;
-    background-image: url("./images/Apple\ logo.png");
-    background-size: cover;
-}
-/* foods  */
+ /* foods   */
 .best-food{
     width: 100%;
     height: auto;
@@ -1031,7 +919,7 @@ h4{
 .crispy-sandwiches{
     width: 1300px;
     height: 500px;
-    margin: 3rem 0 0 0;
+    margin: 5rem 0 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1087,7 +975,7 @@ h4{
 .Fride-chicken{
     width: 1300px;
     height: 500px;
-    margin: 2rem 0 0 0;
+    margin: 4rem 0 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1118,7 +1006,7 @@ h4{
 .spicy-pizza{
     width: 1300px;
     height: 500px;
-    margin: 2rem 0 0 0;
+    margin: 4rem 0 0 0;
     display: flex;
     border-radius: 10px;
     box-shadow: 0px 27px 82px rgba(124, 124, 124, 0.28), 0px 14px 15px rgba(124, 124, 124, 0.06);
@@ -1145,8 +1033,8 @@ h4{
 .footer-img{
     width: 100%;
     height: 300px;
-    margin: 3rem 0 0 0;
-    background-color: #fff;
+    margin: 5rem 0 0 0;
+    background-color: #ffffff;
     background-image: url("./images/Image\ \(13\).png");
     background-size: cover;
     z-index: 9;
@@ -1167,7 +1055,7 @@ h4{
     align-items: center;
     flex-direction: column;
     gap: 20px;
-    z-index: 4;
+    z-index: 7;
 }
 .proseed-btn{
     width: 200px;
@@ -1189,7 +1077,7 @@ footer{
     width: 100%;
     height: auto;
     background-color:  rgba(33, 33, 33, 1);
-    padding: 10rem;
+    padding: 5rem 10rem 3rem 10rem;
 }
 .foot-h3{
     color: white;
@@ -1202,8 +1090,8 @@ footer{
     color: white;
     display: flex;
     justify-content: space-between;
-    gap: 30px;
-    align-items: center;
+    gap: 40px;
+    /* align-items: center; */
     flex-wrap: wrap;
 }
 .foot-pera{
@@ -1375,6 +1263,9 @@ footer{
      .hr{
         display: none;
      }
+     .foot-info1,.foot-info2{
+        justify-content: flex-start;
+     }
 }
 
 @media (max-width:1000px) {
@@ -1432,7 +1323,7 @@ footer{
     }
     #click:checked ~ ul{
         left:0;
-        transition: all 0.5s ease-in;
+        transition: all 0.3s ease-in-out;
     }
     .menu-bar:hover{
         cursor: pointer;
@@ -1482,7 +1373,8 @@ footer{
         height: 900px;
      }
      .track-icons{
-        height: auto;
+        height: 100%;
+        padding: 2rem 10px 2rem 10px;
      }
     }
 @media (max-width:770px) {
@@ -1522,7 +1414,6 @@ footer{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
     }
     input{
         width: 350px;
@@ -1548,11 +1439,10 @@ footer{
    h2{
        top: 151px;
    }
-  
 }
 @media (max-width:600px) {
     .food-footer{
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
     }
     .opens{
@@ -1571,7 +1461,6 @@ footer{
     .write{
         font-size: 14px;
     }
-
 }
 @media (max-width:500px) {
     .header-img{
@@ -1580,7 +1469,6 @@ footer{
     .logo{
         padding-left: 1rem;
     }
-
     .crispy-img,.spicy-img,.chicken-img{
         width: 350px;
         height: 150px;
@@ -1618,7 +1506,7 @@ footer{
         height: 900px;
       }
       .buttons{
-        display: block;
+        flex-wrap: wrap;
         width: 120px;
       }
       .food-search2{
@@ -1629,6 +1517,12 @@ footer{
         width: 200px;
         height: 40px;
         font-size: 13px;
+      }
+      .pickup{
+        justify-content: flex-start;
+      }
+      .delivery{
+        justify-content: flex-start;
       }
 }
 @media (max-width:400px) {
@@ -1645,6 +1539,7 @@ footer{
       }
       .top-nav{
        width: 100%;
+       gap: 90px;
       }
       .second-nav{
         height: 770px;
@@ -1667,9 +1562,6 @@ footer{
      .wagon{
         font-size: 15px;
      }
-     .top-nav{
-        gap: 25px;
-     }
      .enter-address{
         width: 180px;
         gap: 2px;
@@ -1682,6 +1574,9 @@ footer{
     }
     .proseed{
         width: 100%;
+    }
+    .footer-img-title{
+        font-size: 25px;
     }
 }
 @media (max-width:350px) {
@@ -1720,5 +1615,5 @@ footer{
         width: 200px;
         height: 200px;
     }
-    .
 }
+
