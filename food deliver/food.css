@@ -1484,6 +1484,7 @@ footer{
      }
      .search-info{
         padding: 1rem;
+        line-height: 20px;
      }
 
       h1{
@@ -1544,6 +1545,7 @@ footer{
       }
       .second-nav{
         height: 770px;
+
       }
       .menu-bar{
         justify-content: flex-end;
