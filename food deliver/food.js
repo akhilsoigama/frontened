@@ -55,31 +55,31 @@ right_2.addEventListener('click',()=>{
 left_2.addEventListener('click',()=>{
     sliderNumber >1 ? firstSlide() : getEndSlide();
 });
-const gap = 16;
+// const gap = 16;
 
-const carousel = document.getElementById("cards"),
-  content = document.getElementById("foods"),
-  next = document.getElementById("#slider-right"),
-  prev = document.getElementById("#slider-left");
+// const carousel = document.getElementById("cards"),
+//   content = document.getElementById("foods"),
+//   next = document.getElementById("#slider-right"),
+//   prev = document.getElementById("#slider-left");
 
-next.addEventListener("click", e => {
-  carousel.scrollBy(width + gap, 0);
-  if (carousel.scrollWidth !== 0) {
-    prev.style.display = "flex";
-  }
-  if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
-    next.style.display = "none";
-  }
-});
-prev.addEventListener("click", e => {
-  carousel.scrollBy(-(width + gap), 0);
-  if (carousel.scrollLeft - width - gap <= 0) {
-    prev.style.display = "none";
-  }
-  if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
-    next.style.display = "flex";
-  }
-});
+// next.addEventListener("click", e => {
+//   carousel.scrollBy(width + gap, 0);
+//   if (carousel.scrollWidth !== 0) {
+//     prev.style.display = "flex";
+//   }
+//   if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+//     next.style.display = "none";
+//   }
+// });
+// prev.addEventListener("click", e => {
+//   carousel.scrollBy(-(width + gap), 0);
+//   if (carousel.scrollLeft - width - gap <= 0) {
+//     prev.style.display = "none";
+//   }
+//   if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+//     next.style.display = "flex";
+//   }
+// });
 
-let width = carousel.offsetWidth;
-window.addEventListener("resize", e => (width = carousel.offsetWidth));
+// let width = carousel.offsetWidth;
+// window.addEventListener("resize", e => (width = carousel.offsetWidth));
