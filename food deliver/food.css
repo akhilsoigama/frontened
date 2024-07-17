@@ -1416,7 +1416,7 @@ footer{
         align-items: center;
     }
     input{
-        width: 350px;
+        width: 100%;
     }
     .enter-address{
         width: 350px;
@@ -1479,12 +1479,13 @@ footer{
         font-size: 40px;
     }
       .enter-address{
-        width: 200px;
+        width: 100%;
         gap: 2px;
      }
-     .input{
-        width: 150px;
+     .search-info{
+        padding: 1rem;
      }
+
       h1{
         font-size: 25px;
       }
@@ -1495,7 +1496,7 @@ footer{
         top: 5px;
       }
       .food-delivery{
-        width: 220px;
+        width: 100%;
         height: 230px;
       }
       .find-food{
@@ -1511,10 +1512,10 @@ footer{
       }
       .food-search2{
         display: block;
-        width: 100px;
+        width: 100%;
       }
       input{
-        width: 200px;
+        width: 100%;
         height: 40px;
         font-size: 13px;
       }
@@ -1562,13 +1563,6 @@ footer{
      .wagon{
         font-size: 15px;
      }
-     .enter-address{
-        width: 180px;
-        gap: 2px;
-     }
-     .input{
-        width: 150px;
-     }
     .food-section{
         width: auto;
     }
@@ -1592,14 +1586,6 @@ footer{
       }
       .header-2{
         grid-template-columns: 1fr;
-      }
-      input{
-        width: 120px;
-      }
-      .enter-address{
-        width: 180px;
-        gap:5px;
-        justify-content: flex-start;
       }
       .food-search2{
         gap: 5px;
