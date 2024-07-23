@@ -1,122 +1,63 @@
+//function
+function sum(x,y){
+    s = x + y;
+    return s;
+}
+let result1 = sum(100,200);
+document.getElementById("result1").innerHTML ="x+y =" + result1;
+console.log(result1);
 
-//body bg color
-let body = document.querySelector("body");
-body.style.backgroundColor = "skyblue";
-let myPage = alert("java script tutorial");
-//Arithmetic operator
-{
-let x = 10;
-console.log(x);
+function mul(x,y){
+    s = x * y;
+    return s;
 }
-//addition
-{
-    let x = 5;
-    let y = 3;
-    let z = x + y;
-    const a = 3;
-    console.log(z);
-}
-// multiplication
-{
-    let x = 5;
-    let y = 4;
-    let a = x*y;
-    console.log(a);
-}
-//devision
-{
-    let a = 100;
-    let b = 30 ;
-    let c = a/b;
-    console.log(c); 
-}
-//substraction
-{
-    let a = 100;
-    let b = 30 ;
-    let c = a-b;
-    console.log(c); 
-}
-//modulus
-{
-    let a = 100;
-    let b = 20 ;
-    let c = a%b;
-    console.log(c);  
-}
-//assignment operator
-
-//addition assignment operator
-{
-    let a = 10;
-    let b = a += 5;
-    console.log(b);
-}
-//substraction assignment operator
-{
-    let a = 10;
-    let b = a -= 5;
-    console.log(b);
-}
-//devision assignment operator
-{
-    let a = 10;
-    let b = a /= 5;
-    console.log(b);
-}
-// multiplication assignment operator
-{
-    let a = 10;
-    let b = a *= 5;
-    console.log(b);
-}
-// modulus assignment operator
-{
-    let a = 10;
-    let b = a %= 5;
-    console.log(b);
-}
-//  square
-{
-    let a = 2;
-    let b = a **= 5;
-    console.log(b);
-}
-//String Operator
-{
-    let text1 = "A";
-    let text2 = "B";
-    let result = text1 <= text2; //true
-    console.log(result);
-}
-//number string
-{
-    let text1 = "20";
-    let text2 = "10";
-    let result = text1 < text2; //false
-    console.log(result);
-}
-// string addition
-{
-    let text1 = "tonny";
-    let text2 = "stark";
-    let result = text1 + text2; 
-    console.log(result);
-}
-{
-    let text1 = "tonny";
-    let result = text1 += "stark"
-    console.log(result);
-}
-//array
-let arrayName = ["fullname","username","emails","password"];
-console.log(arrayName[2]);
-//object
-let objectName = {
-    fullName : "xyz", 
-    userName : "xyz",
-    emails : "xyz@gmail.com",
-    password : "123xyz"
+let result2 = mul(100,200);
+document.getElementById("result2").innerHTML ="x*y =" + result2;
+console.log(result2);
+// object methods
+let userInfo = {
+    firstName : "Jhon",
+    lastName : "Doe",
+    id : 5566,
+    fullName : function(){
+        return this.firstName + this.lastName;
+    }
 };
-console.log(objectName);
-console.log(objectName.password);
+console.log(userInfo);
+delete userInfo.id;
+console.log(userInfo);
+let info = userInfo.fullName();
+console.log(info);
+let name = document.getElementById("obj").innerHTML = userInfo.fullName();
+
+// strings method
+let text = "Jhon doe"
+let text2 = "tonny stark";
+
+document.getElementById("str").innerHTML = (text);
+document.getElementById("str2").innerHTML = text.length;
+ 
+let upp = text.toUpperCase();
+console.log(upp);
+
+let low = text.toLowerCase();
+console.log(low);
+
+console.log(text.slice(2,7));
+
+let add = text2.concat(text);
+console.log(add);
+
+let text3 = "hello world!"
+console.log (text3.replace("h","y"));
+console.log(text3.charAt(3));
+console.log(text3.repeat(3));
+
+// the user to  enter their fullname. generate to username for theme based on the input.
+// let fullName = prompt("enter your fullname whitout spaces:");
+// let userName = "@" + fullName + fullName.length;
+// console.log(userName);
+let a = "5";
+a = a.padEnd(10,"0");
+console.log(a);
+
