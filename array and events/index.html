@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array and Events</title>
+    <link rel="stylesheet" href="event.css">
+</head>
+<body>
+    <h1>Array</h1>
+    <p>for a given array with marks of student -> [85,97,44,37,76,60] find the average marks of rhe entirer class.</p>
+    <p id="avg"></p>
+    <h1>Events</h1>
+    <h3>Mouse Events</h3>
+    <div class="Events">
+         <div class="btns">
+            <button id="btn1">click me!</button>
+            <button id="btn2">click me 2 times!</button>
+         </div>
+         <div id="box1"> this is a box</div>
+         <button id="btn3">The time is?</button>
+         <button id="btn4" onclick="document.querySelector('#btn4').innerHTML = Date()">The time is?</button>
+         <div id="box2"> this is a box2</div>
+         <div id="box3">this is a box3</div>
+    </div>
+    <hr>
+    <div id="form">
+        <div id="inputs">
+            <h3>Keyboard Events</h3>
+            <p>onkeydown</p>
+            <input type="text" id="inp1" onkeydown="document.getElementById('inputs').style.background = this.value">
+            <p>onkeyup</p>
+            <input type="text" id="inp2" onkeyup="document.getElementById('inputs').style.background = this.value">
+            <p>onkeypress</p>
+            <input type="text" id="inp3" onkeypress="document.getElementById('inputs').style.background = this.value">
+       </div>
+    </div>
+    <script src="./array.js"></script>
+</body>
+</html>
