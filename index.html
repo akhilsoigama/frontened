@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-transform: capitalize;
+        }
         body{
             margin: 0;
             padding: 0; 
@@ -13,17 +19,20 @@
             background-size: cover;
             background-color: gray;
             background-blend-mode:multiply ;
+            position: relative;
+            z-index: 10;
         }
         a{
             color: white;
             text-decoration: none;
             font-size: 30px;
-            border-top:10px solid orangered;
-            border-bottom: 10px solid green;
-            border-left: 10px solid white;
-            border-right: 10px solid white;
+            border-top:5px solid orangered;
+            border-bottom: 5px solid green;
+            border-left: 5px solid white;
+            border-right: 5px solid white;
             border-radius: 25px;
             text-align: center;
+            padding: 10px;
         }
         a:hover{
             color: aqua;
@@ -35,39 +44,98 @@
         h1{
             color:white;
             text-align: center;
-
+            margin: 1rem 0 1rem 0;
         }
-        .navbar{
+        .navbar,.grid,.animation,.html-task,.js-task{
+           margin: 1rem 0 0 0;
+           display: flex;
+           justify-content: flex-start;
+           align-items: center;
+           flex-wrap: wrap;
+           gap :30px;    
+       }
+       .task,.animation-task,.grid-task{
+        margin: 3rem 0 0 0;
+       }
+       .blb{
+        width: 40px;
+        height: 40px;
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzAt7FfRWHf-fS0DpGXmBvt8kgWB5ER0aR4xeQcrgOarpX19at930wWec3DNtvzxflLvU&usqp=CAU");
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        opacity: 0.3; 
+        animation: bubbels 8s linear infinite;  
+        }
+        .bubbels{
+            width: 100%;
+            display: flex;
+            position: absolute;
+            bottom: 0;
+            justify-content: space-around;
+            align-items: center;
+        }
+        @keyframes bubbels {
+            0%{
+                transform: translateY(0);
+                opacity: 0;
+            }
+            50%{
+                opacity: 0.7;
             
-            display: grid;
-            gap: 10%;
-            grid-template-columns: repeat( auto-fit , minmax(150px , 1fr));
-        }
-       .grid-task{
-        position: relative;
-        top: 60px;
-       }
-       .task{
-        position: relative;
-        top: 100px;
-       }
-        @media (max-width:400px) {
-            a{
-                font-size: 20px;
-                border-top: 5px solid orangered;
-                border-bottom: 5px solid green;
-                border-left: 5px solid white;
-                border-right: 5px solid white;
-                border-radius: 5px;
             }
-            .navbar{
-                grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+            75%{
+                opacity: 0.8;
+            }
+            100%{
+                transform: translatey(-200vh);
+                opacity: 0;
             }
         }
-        @media (max-width:220px) {
-            .navbar{
-                grid-template-columns: 0.5fr 0.5fr;
-            }
+        .bubbels .blb:nth-child(1){
+            width: 25px;
+            height: 25px;
+            animation-delay: 0.2s;
+        }
+        .bubbels .blb:nth-child(2){
+            width: 50px;
+            height: 50px;
+            animation-delay: 0.8s;
+        }
+        .bubbels .blb:nth-child(3){
+            width: 30px;
+            height: 30px;
+            animation-delay: 3s;
+        }
+        .bubbels .blb:nth-child(4){
+            width: 15px;
+            height: 15px;
+            animation-delay: 1.7s;
+        }
+        .bubbels .blb:nth-child(5){
+            width: 45px;
+            height: 45px;
+            animation-delay: 4s;
+        }
+        .bubbels .blb:nth-child(6){
+            width: 22px;
+            height: 22px;
+            animation-delay: 1.9s;
+        }
+        .bubbels .blb:nth-child(7){
+            width: 35px;
+            height: 35px;
+            animation-delay: 5s;
+        }
+        .bubbels .blb:nth-child(8){
+            width: 20px;
+            height: 20px;
+            animation-delay: 6s;
+        }
+        .bubbels .blb:nth-child(9){
+            width: 45px;
+            height: 45px;
+            animation-delay: 0.2s;
         }
     </style>
 </head>
@@ -87,45 +155,54 @@
             <a href="./13-06-2024/navbar-9.html">navbar-9</a>
             <a href="./13-06-2024/navbar-10.html">navbar-10</a>
         </div>
-       <br><br><br><br>
-       <div class="grid-task">
+       <div class="animation-task">
         <hr>
         <h1 class="grid-h1">animation</h1>
         <hr class="hr">
-        <br>
+        <div class="animation">
         <a href="./css advance/index.html">animation</a>
+      </div>
     </div>  
         <div class="grid-task">
             <hr>
             <h1 class="grid-h1">grid task</h1>
             <hr class="hr">
-            <br>
+            <div class="grid">
             <a href="grid task/grid.html">Grid Task</a>
-            
-        </div>  
-        <br>
-       
+          </div>
+        </div>   
         <div class="task">
             <hr>
-            <br>
             <h1>html and css task</h1>
             <hr>
-            <br>
+            <div class="html-task">
             <a href="19-06-2024/signup.html">19-06-2024</a>
             <a href="./food deliver/food.html">food deliver</a>
+            </div>
           </div>
           <div class="task">
             <hr>
-            <br>
             <h1>java script</h1>   
             <hr>
-            <br>
+            <div class="js-task">
             <a href="./java script/index.html">java script</a>
             <a href="./js tutorial/index.html">js tutorial</a>
             <a href="./js loop/loop.html">js loops</a> 
             <a href="./array and events/index.html">array and events</a> 
+            <a href="./game/game.html">Game</a>
+           </div>
           </div>
-
+          <div class="bubbels">
+            <div class="blb"></div>
+            <div class="blb"></div>
+            <div class="blb"></div>
+            <div class="blb"></div>
+            <div class="blb"></div>
+            <div class="blb"></div>
+            <div class="blb"></div>
+            <div class="blb"></div>
+            <div class="blb"></div>
+        </div>
 
 </body>
 </html>

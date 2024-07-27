@@ -99,3 +99,10 @@ box3.onmouseout = (evt) =>{
     console.log(evt.target);
     console.log(evt.clientX,evt.clientY);
 }
+let myWindow;
+btn5.onclick = (openWindow) =>{
+   myWindow = window.open("http://www.google.com","","width=400px,height=400px");
+}
+btn6.onclick = (closeWindow) =>{
+   myWindow.close();
+}
