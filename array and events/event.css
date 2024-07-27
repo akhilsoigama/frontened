@@ -12,7 +12,7 @@
 h3{
     text-align: center;
 }
-#box1, #btn1,#btn2,#btn3,#btn4,#box2,#box3{
+#box1, #btn1,#btn2,#btn3,#btn4,#box2,#box3,#btn5,#btn6{
     color: white;
     display: flex;
     justify-content: center;
@@ -38,7 +38,7 @@ h3{
     align-items: center;
     gap: 20px;
 }
-#btn1,#btn2,#btn3{
+#btn1,#btn2,#btn3,#btn5,#btn6{
     height: 40px;
     font-size: 18px;   
 }
@@ -61,10 +61,10 @@ h3{
     background-color: #f3b35d;
     font-size: 18px; 
 }
-#btn1:hover,#btn2:hover,#btn3:hover,#btn4:hover{
+#btn1:hover,#btn2:hover,#btn3:hover,#btn4:hover,#btn5:hover,#btn6:hover{
     background-color: rgba(220, 55, 160, 0.612);
 }
-#btn1:active,#btn2:active,#btn3:active{
+#btn1:active,#btn2:active,#btn3:active,#btn5:active,#btn6{
     background-color: rgba(218, 61, 92, 0.737);
 }
 #btn4:active{
@@ -106,4 +106,12 @@ input{
     width: 350px;
     height: 40px;
     border-radius: 5px;
+}
+#btn5{
+    width: 150px;
+    background-color: rgba(78, 126, 128, 0.699);
+}
+#btn6{
+    width: 150px;
+    background-color: rgba(135, 207, 235, 0.728);
 }
