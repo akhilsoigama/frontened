@@ -5,23 +5,7 @@ const choices = document.querySelectorAll(".choice");
 let msg = document.querySelector("#msg");
 let userScorePara = document.querySelector("#user-score");
 let compScorePara = document.querySelector("#comp-score");
-let drawGame = () => {
-    msg.innerHTML = "Game was Draw, play again"
-    msg.style.background = "#081b31"
-}
-let showWinner = (userWin,compChoice,userChoice) => {
-    if(userWin){
-        userScore++;
-        userScorePara.innerHTML = userScore;
-        msg.innerHTML = `you win! your ${userChoice} beats ${compChoice}`;
-        msg.style.background = "green";
-    }else{
-        compScore++;
-        compScorePara.innerHTML = compScore;
-        msg.innerHTML = `You lose ${compChoice} beats your ${userChoice}`;
-        msg.style.background = "red";
-    };
-}
+
 const genCompChoice = () => {
     let options = ["rock","papper","scissors"];
     let randomIdx = Math.floor(Math.random() * 3);
@@ -33,7 +17,7 @@ const playGame = (userChoice) => {
     console.log("comp choice",compChoice);
 
     if(userChoice === compChoice){
-       drawGame();
+       gameDraw();
     }else{
         let userWin = true;
         if(userChoice === "rock"){
@@ -46,8 +30,25 @@ const playGame = (userChoice) => {
             // papper,rock
             userWin = compChoice === "rock" ? false : true;
         }
-        showWinner(userWin,compChoice,userChoice);
+        Winner(userWin,compChoice,userChoice);
     }
+}
+let gameDraw = () => {
+    msg.innerHTML = "Game was Draw, play again"
+    msg.style.background = "#081b31"
+}
+let Winner = (userWin,compChoice,userChoice) => {
+    if(userWin){
+        userScore++;
+        userScorePara.innerHTML = userScore;
+        msg.innerHTML = `you win! your ${userChoice} beats ${compChoice}`;
+        msg.style.background = "green";
+    }else{
+        compScore++;
+        compScorePara.innerHTML = compScore;
+        msg.innerHTML = `You lose ${compChoice} beats your ${userChoice}`;
+        msg.style.background = "red";
+    };
 }
 choices.forEach((choice)=>{
     console.log(choice);
