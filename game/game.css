@@ -16,6 +16,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 50px;
     font-size: 1.5rem;
     overflow: visible;
@@ -52,13 +53,16 @@ h1{
 }
 .msg-container{
     margin: 3rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #msg{
+    width: auto;
     height: auto;
     font-size: 2rem; 
     background-color: #081b31;
     color: #fff;
-    display: inline;
     padding: 1rem;
     border-radius: 1rem;
 }
