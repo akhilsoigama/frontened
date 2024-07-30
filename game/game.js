@@ -30,14 +30,14 @@ const playGame = (userChoice) => {
             // papper,rock
             userWin = compChoice === "rock" ? false : true;
         }
-        Winner(userWin,compChoice,userChoice);
+        winner(userWin,compChoice,userChoice);
     }
 }
 let gameDraw = () => {
     msg.innerHTML = "Game was Draw, play again"
     msg.style.background = "#081b31"
 }
-let Winner = (userWin,compChoice,userChoice) => {
+let winner = (userWin,compChoice,userChoice) => {
     if(userWin){
         userScore++;
         userScorePara.innerHTML = userScore;
