@@ -70,7 +70,7 @@ console.log("fruits2 =",fruits2);
 function myCallback({ quantity}){
     return quantity > 200 ? "ok" : "low";
 }
-console.log("quantity=",myCallback("kiwi"));
+
 // group by ok and low
 let result = Map.groupBy(fruits2,myCallback);
 // Display Results
@@ -83,3 +83,4 @@ for (let y of result.get("low")){
 };
 console.log(result.get("ok"));
 document.write(text3);
+console.log("quantity=",myCallback("apples"));
