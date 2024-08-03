@@ -1,5 +1,9 @@
 body{
-   transition: all 1.5s ease-in-out;
+    transition: all 1.5s ease-in-out;
+    color: black;
+    background: url("https://www.litchfieldbeach.com/wp-content/uploads/2021/02/Beach-Sunrise.jpg") left;
+    background-size: cover;
+    background-blend-mode: darken;
 }
 .container{
     width: 100%;
@@ -44,15 +48,8 @@ button:active{
     transform: rotate(180deg);
 }
 .dark{
-    color: white;
-    background-color: black;
-    background-image: url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/e0/ce/85/sunset-beach.jpg?w=1200&h=-1&s=1") ;
+    color: white; 
+    background-image: url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/e0/ce/85/sunset-beach.jpg?w=1200&h=-1&s=1");
     background-size: cover;
 }
-.light{
-    color: black;
-    background-color:black;
-    background: url("https://www.litchfieldbeach.com/wp-content/uploads/2021/02/Beach-Sunrise.jpg") left;
-    background-size: cover;
-    background-blend-mode: darken;
-}
+
