@@ -50,18 +50,40 @@ button{
     color: #fff;
     font-size: 24px;
     margin: 8px;
+    position: relative;
+    z-index: 1;
 }
-#AC, #DEL,.operator{
-    font-size: 26px;
-    color: rgb(153, 255, 0);
+button{
+    width: 100px;
+   
+}
+button::before{
+    content: '';
+    width: 0px;
+    height: 100%;
+    background-color: rgba(31, 174, 217, 0.797);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+button:hover::after{
+    width: 100px;
 }
 button:hover{
-    background-color: #716d6990;
+    color: white;
     transform: scale(1.1);
 }
 button:active{
     transform: scale(0.9);
 }
+#AC, #DEL,.operator{
+    font-size: 26px;
+    color: rgb(153, 255, 0);
+}
+
 #equalbtn{
     background-color: #da5834;
 }
