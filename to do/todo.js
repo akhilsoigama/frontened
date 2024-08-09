@@ -4,13 +4,14 @@ let Clear = document.querySelector("#clear");
 let add = document.querySelector("#add");
 let store = document.querySelector("#store")
 function Add() {
-    // if (inputs.value == "") {
-    //     alert("please enter task");
-    // } 
+    if (inputs.value == "") {
+        alert("please enter task");
+    }  
      if(inputs.value) {
         let newEle = document.createElement("ul");
         newEle.innerHTML = `${inputs.value} <i class="fa-solid fa-check"></i><i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash"></i>`;
         text.appendChild(newEle);
+        // let storage = localStorage.setItem(newEle.innerHTML);
         newEle.contentEditable = "false";
         inputs.value = "";
         let deleteIcon = newEle.querySelector(".fa-trash");
@@ -22,14 +23,12 @@ function Add() {
         deleteIcon.addEventListener("click", function() {
             newEle.remove();
         });
-
         editIcon.addEventListener("click", function() {
             newEle.contentEditable = "true";
             deleteIcon.style.display = "none";
             saveIcon.style.display = "inline"; 
             editIcon.style.display = "none"; 
         });
-
         saveIcon.addEventListener("click", function() {
             newEle.contentEditable = "false";
             saveIcon.style.display = "none"; 
@@ -44,14 +43,12 @@ inputs.addEventListener("keypress", function(event) {
         Add();
     }
 });
-
 // Clear all
 Clear.onclick = () => {
     while (text.firstChild) {
         text.removeChild(text.firstChild);
     }
 };
-
 // Add task on button click
 add.onclick = () => {
     Add();

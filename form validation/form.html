@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up page</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="sign-up">
+        <h2>sign up</h2> 
+        <form name="myForm" onsubmit="return validateForm()" method="post">
+            <div id="name">
+                <input type="text" placeholder="First Name" name="f-name"><span class="formerror"></span>
+            </div>
+            <div id="email">
+                <input type="email" name="f-email" id="email" placeholder="Email"><span class="formerror"></span>
+            </div>
+            <div id="pass">
+                <input type="password" placeholder="Password" name="f-pass"><span class="formerror"></span>
+            </div>
+            <div id="cpass">
+                <input type="password" placeholder="Confirm Password" name="f-add"><span class="formerror"></span>
+            </div>
+             <div class="checkbox">
+                <input type="checkbox" class="input-checkbox"> <p>I accept the terms of Use & Privacy Policy</p>  
+            </div> 
+                <input type="submit" value="submit" id="btn">
+            <div class="login-hear">
+                <p class="login">Already have an account?<a href="#">Login hear</a></p>
+            </div>
+        </form>
+    </div>
+    <script src="./form.js"></script>
+</body>
+</html>

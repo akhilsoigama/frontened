@@ -31,61 +31,32 @@ body{
 .col-2{
     grid-column: span 2;
 }
-.img-1{
+.img-1,.img-2,.img-3,.img-4,.img-5,.img-6{
      width: 70px;
      height: 70px;
      border-radius: 50%;
-     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBhvh2PP9r6pplEJxLlLS67hOSbXDjjLYeHA&s");
     background-size: cover;
      background-position: top;
 }
+.img-1{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBhvh2PP9r6pplEJxLlLS67hOSbXDjjLYeHA&s");
+}
 .img-2{
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
     background-image: url("https://cdn.siasat.com/wp-content/uploads/2024/04/Rohit-Sharma-PTI.jpg");
-    background-size: cover;
-    background-position: right;
 }
 .img-3{
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
     background-image: url("https://nonprod-media.webdunia.com/public_html/_media/en/img/article/2021-09/20/full/1632111739-0469.jpg");
-    background-size: cover;
-    background-position: right;
 }
 .img-4{
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
     background-image: url("https://thebiodiary.com/uploads/bio/duplasi-1.jpg");
-    background-size: cover;
-    background-position: right;
-
 }
 .img-5{
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
     background-image: url("https://www.mykhel.com/thumb/247x100x233/cricket/players/4/4894.jpg");
-    background-size: cover;
-    background-position: right;
-
 }
 .img-6{
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
     background-image: url("https://i.dawn.com/primary/2022/05/62947e5e5ad94.jpg");
-    background-size: cover;
-    background-position: center;
-
 }
-
-
-#grid-4 {
-     
+#grid-4 {    
      width: 230px;
      height: 330px;
      background-color: rgb(209, 203, 203);
