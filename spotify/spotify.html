@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="./spotify.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRslcO84eWfXP_4Ucd4Yfz6B8uqJmHaTo0iTw&s"
+                alt="logo" class="logo-img">
+            <h2>Spotify</h2>
+        </div>
+        <div class="ancors">
+            <input type="checkbox" id="click">
+            <label for="click" class="menu-bar">
+                <i class="fa-solid fa-bars" id="bar-icon"></i>
+            </label>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="outer">
+        <div class="container">
+            <div class="songlist">
+                <h1>best of NCS - no Copyright Sounds</h1>
+                <div class="songitem-container">
+                    <div class="song-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTIMtGPGgALMjCwxShfScqVweOrdaIJSQHww&s"
+                            alt="song" class="song-img">
+                        <span>DJ bravo</span>
+                        <span class="songlistplay"><span class="songtimestep">02:30</span><i class="fa-solid fa-circle-play" ></i></span>
+                    </div>
+                    <div class="song-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTIMtGPGgALMjCwxShfScqVweOrdaIJSQHww&s"
+                            alt="song" class="song-img">
+                        <span>Lofi Songs Nonstop</span>
+                        <span class="songlistplay"><span class="songtimestep">01:00:07</span><i class="fa-solid fa-circle-play" ></i></span>
+                    </div>
+                    <div class="song-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTIMtGPGgALMjCwxShfScqVweOrdaIJSQHww&s"
+                            alt="song" class="song-img">
+                        <span>Lofi Songs Nonstop</span>
+                        <span class="songlistplay"><span class="songtimestep">01:00:07</span><i class="fa-solid fa-circle-play" ></i></i></span>
+                    </div>
+                    <div class="song-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTIMtGPGgALMjCwxShfScqVweOrdaIJSQHww&s"
+                            alt="song" class="song-img">
+                        <span>Lofi Songs Nonstop</span>
+                        <span class="songlistplay"><span class="songtimestep">01:00:07</span><i class="fa-solid fa-circle-play" ></i></i></span>
+                    </div>
+                    <div class="song-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTIMtGPGgALMjCwxShfScqVweOrdaIJSQHww&s"
+                            alt="song" class="song-img">
+                        <span>Lofi Songs Nonstop</span>
+                        <span class="songlistplay"><span class="songtimestep">01:00:07</span><i class="fa-solid fa-circle-play" ></i></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="banner"></div>
+        </div>
+    </div>
+    <div class="bottom">
+        <input type="range" name="range" id="musicbar" min="0" max="100">
+        <div class="icons">
+            <i class="fa-solid fa-backward"></i>
+            <i class="fa-solid fa-circle-play" id="masterPlay"></i>
+            <i class="fa-solid fa-forward"></i>
+        </div>
+    </div>
+    <div class="song-info">
+        <img src="https://i.pinimg.com/originals/3e/fe/1c/3efe1cb845954233246f60d5d8395dd0.gif" alt="song-gif"class="song-gif" id="gif">DJ bravo
+    </div>
+    <script src="./spotify.js"></script>
+</body>
+
+</html>
