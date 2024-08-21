@@ -11,7 +11,6 @@ function Add() {
         let newEle = document.createElement("ul");
         newEle.innerHTML = `${inputs.value} <i class="fa-solid fa-check"></i><i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash"></i>`;
         text.appendChild(newEle);
-        // let storage = localStorage.setItem(newEle.innerHTML);
         newEle.contentEditable = "false";
         inputs.value = "";
         let deleteIcon = newEle.querySelector(".fa-trash");
@@ -40,7 +39,7 @@ function Add() {
 //  Add task on Enter key press
 inputs.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
-        Add();
+        Add();  
     }
 });
 // Clear all
@@ -52,4 +51,7 @@ Clear.onclick = () => {
 // Add task on button click
 add.onclick = () => {
     Add();
+    let key = "task";
+    let value = `${inputs}`;
+    localStorage.setItem(key,value);
 };
