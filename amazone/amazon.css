@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+}
+.header {
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.border {
+    outline: 1px solid transparent;
+}
+.border:hover {
+    outline: 2px solid white;
+}
+.amazon-logo {
+    width: 140px;
+    height: 40px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1IRNXk04_6QwSy9uFhAAG6RzqXqNnzyQf0g&s");
+    background-size: cover;
+}
+.location {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1%;
+}
+.add-pera {
+    padding-left: 5%;
+}
+.search {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 80px;
+}
+select {
+    width: 60px;
+    height: 40px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    outline: none;
+}
+input {
+    width: 600px;
+    height: 40px;
+    outline: none;
+    padding: 5px;
+}
+#search-icon {
+    width: 50px;
+    height: 40px;
+    background-color: rgba(254, 182, 75, 0.904);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    outline: none;
+}
+p {
+    opacity: 0.8;
+}
+.shopping {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+#Cart {
+    font-size: 40px;
+}
+.navbar {
+    height: auto;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background-color: rgba(2, 49, 53, 0.925);
+}
+.nav-ancors {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+ul {
+    display: flex;
+}
+li {
+    list-style-type: none;
+}
+a {
+    color: white;
+    text-decoration: none;
+    padding: 0 5px 0 5px;
+}
+a:hover {
+    outline: 1px solid white;
+}
+.bar {
+    display: flex;
+    align-items: center;
+}
+#bar-icon {
+    font-size: 30px;
+    color: white;
+    margin: 0 0 0 5px;
+    display: none;
+}
+#click {
+    height: 20px;
+    display: none;
+}
+#bar-icon:active {
+    color: red;
+}
+.hero-section {
+    width: 100%;
+    position: relative;
+}
+.images {
+    display: flex;
+    transition: all 2s ease-in;
+    animation: slider 10s infinite ease-out;
+}
+.slide-bar {
+    position: absolute;
+    top: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 40px;
+    padding: 1rem;
+}
+#slider-left:active,
+#slider-right:active {
+    color: red;
+}
+.items {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1rem 0 0 0;
+    position: absolute;
+    z-index: 3;
+    top: 15rem;
+}
+.shop1,
+.shop2,
+.shop3,
+.shop4 {
+    width: 340px;
+    height: 400px;
+    background-color: white;
+    box-shadow: 2px 3px 30px black;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+}
+h4 {
+    font-size: 20px;
+}
+.shop {
+    width: 300px;
+    height: 280px;
+    background-size: cover;
+}
+.shop-item1 {
+    background-image: url("https://images-eu.ssl-images-amazon.com/images/G/31/img19/Sports/GW_Desktop/1199101_379x304_Compressed._SY304_CB448278349_.jpg");
+}
+.shop-item2 {
+    background-image: url("https://images-eu.ssl-images-amazon.com/images/G/31/img19/SiddMiniTV/DeskCC-379x304_CVHH_V1._SY304_CB555942623_.jpg");
+}
+.shop-item3 {
+    background-image: url("https://images-eu.ssl-images-amazon.com/images/G/31/2023/GateWay/December/CC/PC_379x304_1._SY304_CB572341311_.jpg");
+}
+.shop-item4 {
+    background-image: url("https://images-eu.ssl-images-amazon.com/images/G/31/img19/OOC/Gateway/wk_25/CC_379X304._SY304_CB555334734_.jpg");
+}
+.img-ancors {
+    color: rgb(6, 118, 118);
+}
+.img-ancors:hover {
+    color: rgb(226, 140, 103);
+}
+@media (min-height:1000px) {
+    .hero-section {
+        height: 500px;
+    }
+
+    .navbar {
+        height: 50px;
+    }
+}
+@media (max-width:1000px) {
+    ul {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        background-color: rgba(2, 49, 53, 0.925);
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    #bar-icon {
+        display: block;
+        padding-right: 1rem;
+    }
+    #click:checked~ul {
+        left: 0%;
+    }
+    .menu-bar:hover {
+        cursor: pointer;
+        color: blueviolet;
+    }
+    .menu-bar:active {
+        color: red;
+    }
+    a {
+        font-size: 20px;
+        transition: all 0.1s ease-in 0.1s;
+        color: white;
+    }
+}
