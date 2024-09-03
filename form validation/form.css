@@ -11,30 +11,40 @@ body{
     align-items: center;
 }
 .sign-up{
-    background-color: rgba(36, 26, 82, 0.863);
+    background-color: #fff;
     width: 570px;
     height: auto;
     padding: 34px;
-    box-shadow: 5px 10px 10px  rgba(97, 84, 158, 0.863) ;
+    box-shadow: 5px 10px 34px  rgba(97, 84, 158, 0.863) ;
     border-radius: 1rem;
 }
-h2{ 
-    padding-top: 20px;
-    text-align: center; 
-    color: white;
+.h2{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    color: green;
     margin: 0 0 1rem 0;
+    flex-direction: column;
+}
+h2{
+    transition: all 0.4s ease-in;
+}
+.underline{
+    width: 35px;
+    height: 4px;
+    background-color: green;
 }
 input{
     width: 100%;
     height: 40px;
-    font-size: 20px;
+    font-size:14px;
     border-radius: 5px;
-    margin-top: 10px;
     outline: none;
     border: none;
-    padding: 0 0 0 5px;
+    transition: all 0.4s ease-in;
 }
-.checkbox{
+#checkbox{
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -44,21 +54,40 @@ input{
     width: 20px;
 }
 p{
-    color: white;
+    color: black;
     margin-top: 20px;
+}  
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 3rem 0 0 0;
 } 
-#btn{
-    width: 100px;
-    height: 40px;
-    background-color: rgba(240, 113, 113, 0.744);
-    color: white;
-    border-radius: 10px;
+#btn2{
+    width: 140px;
+    box-shadow: 0px 10px 34px black;
     font-size: 1rem;
-    outline: none;
+    transition: all 0.2s ease-in-out;
+    border-radius: 1rem;
+}
+#btn{
+    width: 140px;
+    height: 40px;
+    background-color: green;
+    color: white;
+    border-radius: 1rem;
+    font-size: 1rem;
     border: none;
+    box-shadow: 0px 10px 34px black;
+    transition: all 0.2s ease-in-out;
+}
+#name{
+    max-height: 50px;
+    transition: max-height 1s ease-in-out;
 }
 a{
-    color: white;
+    color: black;
 }
 a:hover{
     color: blue;
@@ -72,4 +101,20 @@ a:hover{
 span{
     color: red;
     font-weight: bold;
+}
+.align{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    gap: 10px;
+    padding-left: 5px;
+    border-radius: 10px;
+    margin: 20px 0 0 0;
+    box-shadow: 0px 5px 34px black;
+}
+i{
+    opacity: 0.7;
 }

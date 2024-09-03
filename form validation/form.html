@@ -9,45 +9,49 @@
 </head>
 <body>
     <div class="sign-up">
-        <h2>Sign up</h2>
+      <div class="h2">
+        <h2 id="title">Sign up </h2>
+        <div class="underline"></div>
+      </div>
         <form name="myForm" onsubmit="return validateForm()" method="post">
-          <div id="name">
-            <input type="text" placeholder="First Name" name="fname" /><span
+          <div id="name" class="align">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" placeholder="user name" name="fname"  required/><span
               class="formerror"
             ></span>
           </div>
-          <div id="email">
+          <div id="email" class="align">
+            <i class="fa-solid fa-at"></i>
             <input
-              type="email"
+              type="email"  
               name="femail"
               id="email"
               placeholder="Email"
+              required
             /><span class="formerror"></span>
           </div>
-          <div id="pass">
-            <input type="password" placeholder="Password" name="fpass" /><span
+          <div id="pass" class="align">
+            <i class="fa-solid fa-key"></i>
+            <input type="password" placeholder="Password" name="fpass"  required/><span
               class="formerror"
             ></span>
           </div>
-          <div id="cpass">
+          <div id="cpass" class="align">
+            <i class="fa-solid fa-key"></i>
             <input
               type="password"
               placeholder="Confirm Password"
               name="fcpass"
+              required
             /><span class="formerror"></span>
           </div>
-          <div class="checkbox">
-            <input type="checkbox" class="input-checkbox" />
-            <p>I accept the terms of Use & Privacy Policy</p>
-          </div>
-          <input type="submit" value="Submit" id="btn" />
-          <div class="login-hear">
-            <p class="login">
-              Already have an account?<a href="#">Login here</a>
-            </p>
-          </div>
+          <div class="button">
+          <input type="submit" value="Sign Up" id="btn">
+          <input type="submit" value="Sign in" id="btn2" style="background-color: none;">
+        </div>
         </form>
       </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./form.js"></script>
 </body>
 </html>
