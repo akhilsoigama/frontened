@@ -1,23 +1,24 @@
 const employee = {
-    calcTax(){
+    calcTax() {
         console.log("tax rate is 10%");
     }
 }
 let employee1 = {
-    salary :5000,
+    salary: 5000,
 }
 employee1.__proto__ = employee;
+console.log("employee1", employee1)
 
 // classes
 class toyotaCar {
-    constructor(brand){
+    constructor(brand) {
         console.log("creating new object");
         this.brandName = brand;
     }
-    start(){
+    start() {
         console.log("start")
     }
-    stop(){
+    stop() {
         console.log("stop")
     }
     // setBrand(brand){
@@ -31,12 +32,12 @@ let innova = new toyotaCar("innova");
 console.log(innova);
 
 // inheritance
-class parent{
-    hello(){
+class parent {
+    hello() {
         console.log("hello");
     }
 }
-class child extends parent{}
+class child extends parent { }
 let obj = new child();
 
 // sync
@@ -89,20 +90,20 @@ let obj = new child();
 //         },3000);
 //     })
 // };
-const getPromise = () =>{
- return new Promise((resolve,reject) =>{
-    console.log("promise");
-    resolve("success");
-    // reject("error");
-  });
+const getPromise = () => {
+    return new Promise((resolve, reject) => {
+        console.log("promise");
+        resolve("success");
+        // reject("error");
+    });
 }
 let promise = getPromise();
-promise.then(() =>{
+promise.then(() => {
     console.log("promise fulfiled");
 });
 
 // async function
-async function hello(){
+async function hello() {
     console.log("hello");
 }
 // function getData(dataId,getNextData){
@@ -141,10 +142,10 @@ async function hello(){
 
 // fetch API = Application programing interface
 const URL = "https://cat-fact.herokuapp.com/facts";
- const getFacts = async () =>{
+const getFacts = async () => {
     console.log("getting data");
     let responce = await fetch(URL);
-    console.log(responce);//JSON formet
+    console.log(responce);
     let data = await responce.json();
     console.log(data);
- }
+}
