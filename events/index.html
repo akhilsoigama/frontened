@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events</title>
     <link rel="stylesheet" href="event.css">
 </head>
+
 <body>
     <h1>Events</h1>
     <h3>Mouse Events</h3>
     <div class="Events">
-         <div class="btns">
-            <button id="btn1">click me!</button>
-            <button id="btn2">click me 2 times!</button>
-         </div>
-         <div id="box1"> this is a box</div>
-         <button id="btn3">The time is?</button>
-         <button id="btn4" onclick="document.querySelector('#btn4').innerHTML = Date()">The time is?</button>
-         <div id="box2"> this is a box2</div>
-         <div id="box3">this is a box3</div>
+        <div class="btns">
+            <button id="btn1">onclick</button>
+            <button id="btn2">dblclick</button>
+        </div>
+        <div id="box1"> mouseenter </div>
+        <button id="btn3">mousemove</button>
+        <button id="btn4">focus</button>
+        <div id="box2"> animation</div>
+        <div id="box3">mouseout</div>
+        <div id="box4">mousedown</div>
     </div>
     <hr>
     <div id="form">
@@ -30,12 +33,41 @@
             <input type="text" id="inp2" onkeyup="document.getElementById('inputs').style.background = this.value">
             <p>onkeypress</p>
             <input type="text" id="inp3" onkeypress="document.getElementById('inputs').style.background = this.value">
-       </div>
+        </div>
     </div>
     <hr>
     <h3>Window Event</h3>
     <button id="btn5">open window</button>
     <button id="btn6">close window</button>
     <script src="./events.js"></script>
+
+    <h1>Change Background Color</h1>
+
+    <label for="colorPicker">Select a color: </label>
+    <select id="colorPicker" onchange="changeBackgroundColor()">
+        <option value="">--Choose Color--</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+        <option value="yellow">Yellow</option>
+        <option value="white">White</option>
+        <option value="coral">coral</option>
+        <option value="violet">violet</option>
+        <option value="crimson">crimson</option>
+    </select>
+    <h2>Email Validation</h2>
+    <form onsubmit="return email()">
+        <label for="emailInput">Enter your email:</label>
+        <input type="text" id="emailInput" placeholder="you@example.com" onblur="email()">
+        <button type="submit" id="submit">submit</button>
+        <div id="errorMessage" class="error"></div>       
+    </form>
+    <h1>onplay</h1>
+   <audio controls id="audio" onplay="play()">
+       <source src="./1.mp3" type="audio/mp3">
+   </audio>
+   <p id="text"></p>
+   
+   <script src="./events.js"></script>
 </body>
 </html>
