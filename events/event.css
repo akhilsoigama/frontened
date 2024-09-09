@@ -5,14 +5,15 @@
     width: 100%;
     height: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
+    gap: 50px;
 }
 h3{
     text-align: center;
 }
-#box1, #btn1,#btn2,#btn3,#btn4,#box2,#box3,#btn5,#btn6{
+#box1, #btn1,#btn2,#btn3,#btn4,#box2,#box3,#btn5,#btn6,#box4{
     color: white;
     display: flex;
     justify-content: center;
@@ -61,6 +62,11 @@ h3{
     background-color: #f3b35d;
     font-size: 18px; 
 }
+#box4{
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+}
 #btn1:hover,#btn2:hover,#btn3:hover,#btn4:hover,#btn5:hover,#btn6:hover{
     background-color: rgba(220, 55, 160, 0.612);
 }
@@ -74,6 +80,15 @@ h3{
     width: 250px;
     height: 250px;
     background-color: darkmagenta;
+    position: relative;
+}
+@keyframes move {
+    0%{
+        top: 0px;
+    }
+    100%{
+        top: 200px;
+    }
 }
 #box3{
     width: 150px;
@@ -84,7 +99,7 @@ h3{
     width: 50%;
     height: 80vh;
     color: white;
-    background: gray url("https://i.pinimg.com/236x/c2/48/bf/c248bf90e418a9a022026bfd1f3adbbb.jpg") no-repeat top right;
+    background:  url("https://i.pinimg.com/236x/c2/48/bf/c248bf90e418a9a022026bfd1f3adbbb.jpg") no-repeat top right;
     background-size: cover;
     background-blend-mode:multiply;
     border-radius: 8px;
@@ -114,4 +129,12 @@ input{
 #btn6{
     width: 150px;
     background-color: rgba(135, 207, 235, 0.728);
+}
+#submit{
+    width: 100px;
+    height: 40px;
+    background-color: crimson;
+    border: none;
+    color: white;
+    border-radius: 8px;
 }
