@@ -9,23 +9,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(23, 21, 21, 0.674);
+    background-color: rgba(23, 21, 21, 0.299);
     background-image: url("https://images.gludy.com/photos/0/switzerland-rivers-valley-rocks-hd-wallpaper.jpg");
     background-size: cover;
     background-blend-mode: darken;
 }
 .registor{
+    width: auto;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 50px;
     flex-direction: column;
     color: white;
     padding: 34px;
-    background-color: rgba(0, 0, 0, 0.251);
-    border: 5px solid black;
+    backdrop-filter: blur(3px);
     border-radius: 1rem;
-    box-shadow: inset 0px 5px 10px 34px rgba(0, 0, 0, 0.251);
+    border: 2px solid white;
 }
 .username,.personal-info,.pass-word{
     color: white;
@@ -37,26 +38,31 @@
 .input{
     width: 250px;
     height: 40px;
-    color: rgba(255, 255, 255, 0.781);
-    background-color:rgba(0, 0, 0, 0.582);
+    color:white;
+    background-color:transparent;
     outline: none;
     border-radius: 8px;
     padding: 0 0 0 8px;
     font-weight: 700;
-    border: 1px solid white;
-    box-shadow: inset 0px 5px 10px 24px rgba(255, 255, 255, 0.128);  
+    font-size: 1rem;
+    border: none;
+    border-bottom: 2px solid rgb(255, 252, 252);  
 }
 #Submit{
     width: 150px;
     height: 40px;
     background-color:crimson;
     color: rgba(255, 255, 255, 0.792);
-    border-radius: 8px;
-    box-shadow: inset 0px 5px 10px 24px rgba(255, 255, 255, 0.128); 
+    border-radius: 8px; 
     border: none; 
+    font-weight: 700;
+    font-size: 1rem;
 }
 #Submit:active{
     transform: scale(0.8);
+}
+input::placeholder{
+    color: white;
 }
 @media (max-width:426px) {
     .input{
