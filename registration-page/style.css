@@ -13,10 +13,9 @@
     background-image: url("https://images.gludy.com/photos/0/switzerland-rivers-valley-rocks-hd-wallpaper.jpg");
     background-size: cover;
     background-blend-mode: darken;
+    position: relative;
 }
-.registor{
-    width: auto;
-    height: 80vh;
+.registor,.login{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,6 +26,11 @@
     backdrop-filter: blur(3px);
     border-radius: 1rem;
     border: 2px solid white;
+
+}
+.registor{
+    width: 100%;
+    height: 100%;
 }
 .username,.personal-info,.pass-word{
     color: white;
@@ -35,8 +39,18 @@
     justify-content: center;
     gap: 20px;
 }
+.fname,.lname,.email,.number,.cpass,.pass{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.error{
+    color: red;
+    padding-left: 10px;
+    font-size: 1rem;
+}
 .input{
-    width: 250px;
+    width: 350px;
     height: 40px;
     color:white;
     background-color:transparent;
@@ -64,8 +78,98 @@
 input::placeholder{
     color: white;
 }
+.login{
+    width: 100%;
+    height: 80vh;
+    transition: all 0.2s c;
+}
+#verify{
+    width: 38.4%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    background-color: white;  
+    transition: transform .4s top .4s;
+    visibility: hidden;
+    border-radius: 1rem;
+}
+#verify i{
+    font-size: 40px;
+    color: green;
+}
+#verify button{
+    width: 150px;
+    height: 40px;
+    background-color: darkcyan;
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 8px;
+    letter-spacing: 2px;
+    box-shadow: 0px 5px 40px 34px rgba(143, 140, 140, 0.32);
+}
+#verify button:active{
+    transform: scale(0.9);
+}
+#error{
+    color: red;
+    font-size: 1rem;
+    font-weight: 600;
+}
 @media (max-width:426px) {
     .input{
         width: 100%;
+    }
+}
+@media (max-width:590px) {
+    .registor{
+        height: 100%;
+    }
+    .container{
+        height: 100%;
+    }
+    .login{
+        height: 100vh;
+    }
+    #verify{
+        width: 95%;
+        height: 90vh;
+    }
+    .input{
+        width: 100%;
+    }
+}
+@media (min-width:550px) {
+    #verify{
+        width: 90%;
+    }
+}
+@media (min-width:650px) {
+    #verify{
+        width: 75%;
+    }
+}
+@media (min-width:780px) {
+    #verify{
+        width: 65%;
+    }
+}
+@media (min-width:900px) {
+    #verify{
+        width: 55%;
+    }
+}
+@media (min-width:1050px) {
+    #verify{
+        width: 45%;
+    }
+}
+@media (min-width:1280px) {
+    #verify{
+        width: 38.5%;
     }
 }
