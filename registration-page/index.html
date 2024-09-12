@@ -13,50 +13,48 @@
 <body>
     <div class="container">
         <form action="" name="myForm">
-            <div class="registor">
-                <h1>Ragistration Page</h1>
+            <div class="register">
+                <h1>Registration Page</h1>
                 <div class="username">
                     <div class="fname">
                         <input type="text" class="input" id="First-name" name="fname" placeholder="First Name" required>
                         <span class="error"></span>
                     </div>
                     <div class="lname">
-                        <input type="text" class="input" id="Last-name" name="flname" placeholder="Last Name" required>
+                        <input type="text" class="input" id="Last-name" name="lname" placeholder="Last Name" required>
                         <span class="error"></span>
                     </div>
                 </div>
                 <div class="personal-info">
                     <div class="email">
-                        <input type="email" class="input" id="Email" name="femail" placeholder="Email" required>
+                        <input type="email" class="input" id="Email" name="email" placeholder="Email" required>
                         <span class="error"></span>
                     </div>
                     <div class="number">
-                        <input type="number" class="input" id="Mobile-num" name="fmobile" placeholder="Mobile Number"
-                            required> <span class="error"></span>
+                        <input type="text" class="input" id="Mobile-num" name="mobile" placeholder="Mobile Number" required>
+                        <span class="error"></span>
                     </div>
                 </div>
                 <div class="pass-word">
                     <div class="pass">
-                        <input type="password" class="input" id="Password" name="fpass" placeholder="Password" required>
+                        <input type="password" class="input" id="Password" name="password" placeholder="Password" required>
                         <span class="error"></span>
                     </div>
                     <div class="cpass">
-                        <input type="password" class="input" id="Confirm-pass" name="fcpass"
-                            placeholder="Confirm Password" required>
+                        <input type="password" class="input" id="Confirm-pass" name="confirmPassword" placeholder="Confirm Password" required>
                         <span class="error"></span>
                     </div>
                 </div>
-                <button type="submit" id="Submit" value="Ragistor Now">submit</button>
+                <button type="submit" id="Submit" value="Register Now">Submit</button>
             </div>
         </form>
-        <div class="verify" id="verify">
+        <div class="verify" id="verify" style="visibility:hidden">
             <i class="fa-regular fa-circle-check"></i>
             <h1>Thank You!</h1>
-            <p>Your Were Registration succsessfully,Thank You</p>
+            <p>Your registration was successful. Thank you!</p>
             <a href="./login.html"><button>Ok</button></a>
         </div>
     </div>
-
 
     <script src="./script.js"></script>
 </body>

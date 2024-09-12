@@ -1,26 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login page</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <div class="container">
-        <form action="">
+        <form>
             <div class="login">
                 <h1>Login</h1>
                 <div class="personal-info">
-                    <input type="email"class="input" id="Email" placeholder="Email" required>
+                    <input type="email" class="input l-Email" id="Email" placeholder="Email" required>
+                    <span class="error"></span>
                 </div>
                 <div class="pass-word">
-                    <input type="password" class="input" id="Password" placeholder="Password" required>
+                    <input type="password" class="input l-Password" id="Password" placeholder="Password" required>
+                    <span class="error"></span>
                 </div>
-                <button type="submit" id="Submit" value="Ragistor Now">Login</button>
+                <button type="submit" id="Submit" onclick="check(event)">Login</button>
             </div>
         </form>
     </div>
-    <script src="./script.js"></script>
+    <script>
+
+        function setError(id, errorMsg) {
+            let element = document.getElementById(id);
+            let errorElement = element.nextElementSibling;
+            if (errorElement && errorElement.classList.contains("error")) {
+                errorElement.innerHTML = errorMsg;
+            }
+        }
+
+        function clearError() {
+            let errors = document.getElementsByClassName("error");
+            for (let item of errors) {
+                item.innerHTML = "";
+            }
+        }
+
+        function validation() {
+            clearError();
+            let returnval = true;
+
+            let login = document.getElementById("Email").value;
+            let pass = document.getElementById("Password").value;
+
+            if (!(login)) {
+                setError("Email", "* Please enter a valid email address");
+                returnval = false;
+            }
+
+            if (pass.length < 8) {
+                setError("Password", "* Password should be at least 8 characters long");
+                returnval = false;
+            }
+
+            return returnval;
+        }
+
+        function check(event) {
+            event.preventDefault();
+
+            if (!validation()) {
+                return false;
+            }
+
+            let login = document.getElementById("Email").value;
+            let pass = document.getElementById("Password").value;
+
+            let storedData = localStorage.getItem("user-Information");
+
+            if (!storedData) {
+                alert("No users are registered");
+                return false;
+            }
+
+            let userArray = JSON.parse(storedData);
+            let userFound = false;
+
+            for (let i = 0; i < userArray.length; i++) {
+                if (userArray[i].email === login && userArray[i].password === pass) {
+                    alert("Your login has been successfully completed.");
+                    userFound = true;
+                    break;
+                }
+            }
+
+            if (!userFound) {
+                alert("User not found");
+                return false;
+            }
+
+            return true;
+        }
+
+    </script>
 </body>
+
 </html>
