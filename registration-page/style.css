@@ -1,9 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.container{
+
+.container {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -15,7 +16,9 @@
     background-blend-mode: darken;
     position: relative;
 }
-.register,.login{
+
+.register,
+.login {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,62 +31,81 @@
     border: 2px solid white;
 
 }
-.register{
+
+.register {
     width: 100%;
     height: 100%;
 }
-.username,.personal-info,.pass-word{
+
+.username,
+.personal-info,
+.pass-word {
     color: white;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
-.fname,.lname,.email,.number,.cpass,.pass,.login .personal-info ,.login .pass-word {
+
+.fname,
+.lname,
+.email,
+.number,
+.cpass,
+.pass,
+.login .personal-info,
+.login .pass-word {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.error{
+
+.error {
     color: red;
     padding-left: 10px;
     font-size: 1rem;
 }
-.input{
+
+.input {
     width: 350px;
     height: 40px;
-    color:white;
-    background-color:transparent;
+    color: white;
+    background-color: transparent;
     outline: none;
     border-radius: 8px;
     padding: 0 0 0 8px;
     font-weight: 700;
     font-size: 1rem;
     border: none;
-    border-bottom: 2px solid rgb(255, 252, 252);  
+    border-bottom: 2px solid rgb(255, 252, 252);
 }
-#Submit{
+
+#Submit {
     width: 150px;
     height: 40px;
-    background-color:crimson;
+    background-color: crimson;
     color: rgba(255, 255, 255, 0.792);
-    border-radius: 8px; 
-    border: none; 
+    border-radius: 8px;
+    border: none;
     font-weight: 700;
     font-size: 1rem;
 }
-#Submit:active{
+
+#Submit:active {
     transform: scale(0.8);
 }
-input::placeholder{
+
+input::placeholder {
     color: white;
 }
-.login{
+
+.login {
     width: 100%;
     height: 80vh;
     transition: all 0.2s c;
 }
-#verify{
+
+#verify {
     width: 38.4%;
     height: 50vh;
     display: flex;
@@ -92,16 +114,18 @@ input::placeholder{
     flex-direction: column;
     gap: 20px;
     position: absolute;
-    background-color: white;  
+    background-color: white;
     transition: transform .4s top .4s;
-    visibility: hidden;
+    visibility: visible;
     border-radius: 1rem;
 }
-#verify i{
+
+#verify i {
     font-size: 40px;
     color: green;
 }
-#verify button{
+
+#verify button {
     width: 150px;
     height: 40px;
     background-color: darkcyan;
@@ -112,67 +136,96 @@ input::placeholder{
     letter-spacing: 2px;
     box-shadow: 0px 5px 40px 34px rgba(143, 140, 140, 0.32);
 }
-#verify button:active{
+
+#verify button:active {
     transform: scale(0.9);
 }
-.error{
+
+.error {
     color: red;
     font-size: 1rem;
     font-weight: 600;
 }
-.login .personal-info .input,.login .pass-word .input{
+
+.login .personal-info .input,
+.login .pass-word .input {
     width: 400px;
 }
-@media (max-width:500px) {
-    .input{
+
+@media (max-width:530px) {
+    .input {
         width: 100%;
     }
+
+    .container {
+        height: 100%;
+    }
+    #verify {
+        width: 95%;
+        height: 90vh;
+    }
+    
+
 }
-@media (max-width:590px) {
-    .registor{
-        height: 100vh;
+
+@media (min-width:530px) {
+
+    .container {
+        height: auto;
+    }
+    #verify {
+        width: 95%;
+        height: 90vh;
+    }
+
+    .input {
+        width: 350px;
+    }
+}
+
+@media (min-width:550px) {
+    #verify {
+        width: 90%;
+    }
+}
+
+@media (min-width:650px) {
+    #verify {
+        width: 75%;
+    }
+}
+
+@media (min-width:780px) {
+    #verify {
+        width: 65%;
     }
     .container{
         height: 100%;
     }
-    .login{
-        height: 100vh;
-    }
-    #verify{
-        width: 95%;
-        height: 90vh;
-    } 
-    .input{
-        width: 100%;
-    }
 }
-@media (min-width:550px) {
-    #verify{
-        width: 90%;
-    }
-}
-@media (min-width:650px) {
-    #verify{
-        width: 75%;
-    }
-}
-@media (min-width:780px) {
-    #verify{
+@media (min-width:790px) {
+    #verify {
         width: 65%;
+    }
+    .container{
+        height: 100vh;
     }
 }
 @media (min-width:900px) {
-    #verify{
+    #verify {
         width: 55%;
     }
 }
+
 @media (min-width:1050px) {
-    #verify{
+    #verify {
         width: 45%;
     }
+   
 }
+
 @media (min-width:1280px) {
-    #verify{
+    #verify {
         width: 38.5%;
     }
 }
