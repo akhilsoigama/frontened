@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login page</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <style>
         @media (max-width:500px) {
 
@@ -37,11 +39,18 @@
                     <span class="error"></span>
                 </div>
                 <div class="pass-word">
-                    <input type="password" class="input l-Password" id="Password" placeholder="Password" required>
+                    <div class="icon">
+                        <input type="password" class="fpass" id="Password" name="password" placeholder="Password"
+                            required><i class="fa-solid fa-eye" id="icon-eye3"></i>
+                        <i class="fa-solid fa-eye-slash" id="icon-eye-slash3"></i>
+                    </div>
                     <span class="error"></span>
+
                 </div>
                 <button type="submit" id="Submit" onclick="check(event)">Login</button>
+                <p style="font-size: 1rem;">Create a new account? <a href="./index.html" id="link">Register</a></p>
             </div>
+            
         </form>
     </div>
     <script>
@@ -116,6 +125,23 @@
 
             return true;
         }
+        let eyeIcon3 = document.getElementById("icon-eye3");
+        let eyeSlash3 = document.getElementById("icon-eye-slash3");
+        eyeIcon3.addEventListener("click", () => {
+            eyeIcon3.style.display = "none";
+            if (confirmPass.type == "password") {
+                confirmPass.type = "text";
+            }
+            eyeSlash3.style.display = "block";
+
+        });
+        eyeSlash3.addEventListener("click", () => {
+            eyeIcon2.style.display = "block";
+            if (confirmPass.type == "text") {
+                confirmPass.type = "password";
+            }
+            eyeSlash3.style.display = "none";
+        });
 
     </script>
 </body>
