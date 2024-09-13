@@ -102,3 +102,40 @@ function validation() {
 
   return returnval;
 }
+
+let eyeIcon = document.getElementById("icon-eye");
+let eyeSlash = document.getElementById("icon-eye-slash");
+let eyeIcon2 = document.getElementById("icon-eye2");
+let eyeSlash2 = document.getElementById("icon-eye-slash2");
+
+eyeIcon.addEventListener("click",() =>{
+  eyeIcon.style.display = "none";
+  if(password.type == "password"){
+    password.type = "text";
+  }
+  eyeSlash.style.display = "block";
+
+});
+eyeSlash.addEventListener("click",() =>{
+  eyeIcon.style.display = "block";
+  if(password.type == "text"){
+    password.type = "password";
+  }
+  eyeSlash.style.display = "none";
+});
+
+eyeIcon2.addEventListener("click",() =>{
+  eyeIcon2.style.display = "none";
+  if(confirmPass.type == "password"){
+    confirmPass.type = "text";
+  }
+  eyeSlash2.style.display = "block";
+
+});
+eyeSlash2.addEventListener("click",() =>{
+  eyeIcon2.style.display = "block";
+  if(confirmPass.type == "text"){
+    confirmPass.type = "password";
+  }
+  eyeSlash2.style.display = "none";
+});

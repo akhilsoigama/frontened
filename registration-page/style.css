@@ -66,20 +66,22 @@
     font-size: 1rem;
 }
 
-.input {
-    width: 350px;
-    height: 40px;
+.input,.icon,.fpass,.fcpass{  
     color: white;
     background-color: transparent;
     outline: none;
     border-radius: 8px;
-    padding: 0 0 0 8px;
     font-weight: 700;
     font-size: 1rem;
     border: none;
+    cursor: pointer;
+}
+.input,.icon{
+    width: 350px; 
+    height: 40px;
+    padding: 0 0 0 8px;
     border-bottom: 2px solid rgb(255, 252, 252);
 }
-
 #Submit {
     width: 150px;
     height: 40px;
@@ -89,6 +91,7 @@
     border: none;
     font-weight: 700;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 #Submit:active {
@@ -147,13 +150,34 @@ input::placeholder {
     font-weight: 600;
 }
 
-.login .personal-info .input,
-.login .pass-word .input {
-    width: 400px;
+.login .personal-info .input {
+    width: 350px;
+}
+.icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
 }
 
+#icon-eye-slash,#icon-eye-slash2{
+    display: none;
+}
+.fpass,.fcpass{
+    width: 250px;
+    height: 40px;
+}
+#link{
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+}
+#link:hover{
+    color: blue;
+}
 @media (max-width:530px) {
-    .input {
+    .input,.icon {
         width: 100%;
     }
 
@@ -178,7 +202,7 @@ input::placeholder {
         height: 90vh;
     }
 
-    .input {
+    .input,.icon {
         width: 350px;
     }
 }
