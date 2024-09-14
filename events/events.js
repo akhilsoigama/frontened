@@ -85,11 +85,6 @@ function email() {
         errorMessage.textContent = "";
     }
 }
-// audio
-// function play(){
-//     let text = document.getElementById("text");
-//     text.innerHTML = "the audio has started to play";
-// }
 
 
 

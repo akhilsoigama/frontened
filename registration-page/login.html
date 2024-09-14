@@ -44,13 +44,13 @@
                             required><i class="fa-solid fa-eye" id="icon-eye3"></i>
                         <i class="fa-solid fa-eye-slash" id="icon-eye-slash3"></i>
                     </div>
-                    <span class="error"></span>
+                    <span class="error2"></span>
 
                 </div>
                 <button type="submit" id="Submit" onclick="check(event)">Login</button>
-                <p style="font-size: 1rem;">Create a new account? <a href="./index.html" id="link">Register</a></p>
+                <p style="font-size: 1rem;">don't have an account? <a href="./index.html" id="link">Register</a></p>
             </div>
-            
+
         </form>
     </div>
     <script>
@@ -61,12 +61,16 @@
             if (errorElement && errorElement.classList.contains("error")) {
                 errorElement.innerHTML = errorMsg;
             }
-        }
+        }  
 
         function clearError() {
             let errors = document.getElementsByClassName("error");
+            let errors2 = document.getElementsByClassName("error2");
             for (let item of errors) {
                 item.innerHTML = "";
+            }
+            for (let err of errors2) {
+                err.innerHTML = '';
             }
         }
 
@@ -83,7 +87,8 @@
             }
 
             if (pass.length < 8) {
-                setError("Password", "* Password should be at least 8 characters long");
+                let error = document.querySelector(".error2");
+                error.innerHTML = "* Password should be at least 8 characters long";
                 returnval = false;
             }
 
@@ -127,22 +132,22 @@
         }
         let eyeIcon3 = document.getElementById("icon-eye3");
         let eyeSlash3 = document.getElementById("icon-eye-slash3");
+        let password = document.getElementById("Password");
         eyeIcon3.addEventListener("click", () => {
             eyeIcon3.style.display = "none";
-            if (confirmPass.type == "password") {
-                confirmPass.type = "text";
+            if (password.type == "password") {
+                password.type = "text";
             }
             eyeSlash3.style.display = "block";
 
         });
         eyeSlash3.addEventListener("click", () => {
-            eyeIcon2.style.display = "block";
-            if (confirmPass.type == "text") {
-                confirmPass.type = "password";
+            eyeIcon3.style.display = "block";
+            if (password.type == "text") {
+                password.type = "password";
             }
             eyeSlash3.style.display = "none";
         });
-
     </script>
 </body>
 

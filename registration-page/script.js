@@ -45,11 +45,18 @@ function setError(id, errorMsg) {
 
 function clearError() {
   let errors = document.getElementsByClassName("error");
+  let errors2 = document.getElementsByClassName("error2");
+  let errors3 = document.getElementsByClassName("error3");
+
+
   for (let item of errors) {
     item.innerHTML = "";
   }
+  for(let err3 of errors3){
+    err3.innerHTML = '';
+  }
 }
-
+  
 function validation() {
   clearError();
   let returnval = true;
@@ -87,16 +94,14 @@ function validation() {
   }
 
   if (password.value.length < 8) {
-    setError("Password", "* Password should be at least 8 characters long");
+    let error = document.querySelector(".error2");
+    error.innerHTML = "* Password should be at least 8 characters long";
     returnval = false;
   }
 
   if (password.value !== confirmPass.value) {
-    setError("Confirm-pass", "* Password and confirm password should match!");
-    returnval = false;
-  }
-  if (confirmPass.value.length === 0) {
-    setError("Confirm-pass", "* Please confirm your password");
+    let error3 = document.querySelector(".error3");
+    error3.innerHTML = "* Password and confirm password should match!";
     returnval = false;
   }
 
