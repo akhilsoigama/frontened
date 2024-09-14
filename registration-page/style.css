@@ -144,7 +144,7 @@ input::placeholder {
     transform: scale(0.9);
 }
 
-.error {
+.error,.error2,.error3 {
     color: red;
     font-size: 1rem;
     font-weight: 600;
@@ -160,11 +160,11 @@ input::placeholder {
     padding-right: 20px;
 }
 
-#icon-eye-slash,#icon-eye-slash2{
+#icon-eye-slash,#icon-eye-slash2,#icon-eye-slash3{
     display: none;
 }
 .fpass,.fcpass{
-    width: 250px;
+    width: 100%;
     height: 40px;
 }
 #link{
@@ -176,6 +176,7 @@ input::placeholder {
 #link:hover{
     color: blue;
 }
+
 @media (max-width:530px) {
     .input,.icon {
         width: 100%;
