@@ -1,30 +1,21 @@
-let imgBox2 = document.querySelector(".img-box2");
+let input = document.getElementById("file-input");
+let dropImg = document.getElementById("drop-img");
+let imgView = document.getElementById("img-view");
 
-let boxes = document.getElementsByClassName("box");
+input.addEventListener("change", uploadImage);
 
-imgBox2.addEventListener("dragstart", (e) => {
-    e.target.className += ' hold';
-    setTimeout(() => {
-        e.target.className = ' hide';
-    }, 0);
-});
-imgBox2.addEventListener("dragend", (e) => {
-    e.target.className = ' img-box2';
-});
-
-
-for (box of boxes) {
-    box.addEventListener("dragover", (e) => {
-        e.preventDefault();
-    })
-    box.addEventListener("dragenter", (e) => {
-        e.target.className += " dashed"
-    })
-    box.addEventListener("dragleave", (e) => {
-        e.target.className = 'box';
-    })
-    box.addEventListener("drop", (e) => {
-        e.target.append(imgBox2);
-
-    })
+function uploadImage() {
+    let url = URL.createObjectURL(input.files[0]);
+    imgView.style.backgroundImage = `URL(${url})`;
+    imgView.textContent = "";
+    imgView.style.border = "none";
 }
+dropImg.addEventListener("dragover", (e) => {
+    e.preventDefault();
+});
+dropImg.addEventListener("drop", (e) => {
+    e.preventDefault();
+    input.files = e.dataTransfer.files;
+    console.log(input.files);
+    uploadImage();
+})

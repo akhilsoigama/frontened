@@ -4,23 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drop-image</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Drag and drop image</title>
 </head>
+<link rel="stylesheet" href="./style.css">
 
 <body>
-    <div class="box">
+    <div class="container">
+        <label for="file-input" id="drop-img">
+            <input type="file" accept="image/*" id="file-input" hidden>
+            <div id="img-view">
+                <img src="https://media.lordicon.com/icons/wired/gradient/2-cloud-upload.gif" alt="upload image">
+              
+            </div>
+        </label>
     </div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box">
-        <div class="img-box2" draggable="true"></div>
-    </div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <script src="./script.js"></script>
-</body>
 
+    <script src="./script.js">
+       
+    </script>
+</body>
 </html>
+
