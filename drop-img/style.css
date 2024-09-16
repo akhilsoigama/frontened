@@ -2,44 +2,43 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-body{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-.box{
-    width: 350px;
-    height: 200px;
-    display: inline-block;
-    border: 2px solid black;
-    border-radius: 5px;
-}
-.img-box2{
-    width: 330px;
-    height: 180px;
-    background-size: cover;
-    cursor: pointer;
-    position: relative;
-    top: 10px;
-    left: 7px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.img-box2{
-    background-image: url("https://static.india.com/wp-content/uploads/2024/04/MixCollage-10-Apr-2024-10-51-PM-9086.jpg");
-    border: 5px;
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: darkcyan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.hold{
-    border: 2px solid red;
+
+#drop-img {
+    width: 500px;
+    height: 400px;
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 1rem;
 }
-.hide{
-    display: none;
+
+#img-view {
+    background-color: #eaeaea;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px dashed #b7b6b6;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
 }
-.dashed{
-    background-image: linear-gradient(orange,white,green);
-    border-radius: 5px;
+
+img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
 }
