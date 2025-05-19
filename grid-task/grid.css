@@ -1,0 +1,130 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    margin: 10px;
+    width: 80%;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 150px 150px 1fr;
+    row-gap: 30px;
+    column-gap: 30px;
+}
+.grid{
+    background-color: rgb(255, 250, 243);
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 15px;
+    justify-content:center;
+    align-content:center;
+    text-align: left;
+}
+.row-2{
+    grid-row: span 2;
+}
+.col-2{
+    grid-column: span 2;
+}
+.img-1,.img-2,.img-3,.img-4,.img-5,.img-6{
+     width: 70px;
+     height: 70px;
+     border-radius: 50%;
+     background-size: cover;
+     background-position: top;
+}
+.img-1{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBhvh2PP9r6pplEJxLlLS67hOSbXDjjLYeHA&s");
+}
+.img-2{
+    background-image: url("https://cdn.siasat.com/wp-content/uploads/2024/04/Rohit-Sharma-PTI.jpg");
+}
+.img-3{
+    background-image: url("https://nonprod-media.webdunia.com/public_html/_media/en/img/article/2021-09/20/full/1632111739-0469.jpg");
+}
+.img-4{
+    background-image: url("https://thebiodiary.com/uploads/bio/duplasi-1.jpg");
+}
+.img-5{
+    background-image: url("https://www.mykhel.com/thumb/247x100x233/cricket/players/4/4894.jpg");
+}
+.img-6{
+    background-image: url("https://i.dawn.com/primary/2022/05/62947e5e5ad94.jpg");
+}
+#grid-4 {    
+     width: 300px;
+     height: 150px;
+     background-color: rgb(209, 203, 203);
+     position: relative;
+}
+#grid-4::before{
+    content: '';
+    background: linear-gradient(to bottom,rgb(199, 151, 159),rgb(162, 70, 86));
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    margin: -10px;
+    border-radius: 20px;
+    
+}
+#grid-5{
+    width: 350px;
+    height: 220px;
+    background-color: rgb(209, 203, 203);
+    position: relative;
+    top: 90px;
+}
+#grid-5::before{
+   content: '';
+   background: linear-gradient(to bottom,rgb(171, 177, 125),rgb(147, 176, 212));
+   position: absolute;
+   top: 0;
+   right: 0;
+   left: 0;
+   bottom: 0;
+   z-index: -1;
+   margin: -10px;
+   border-radius: 10px;
+}
+.containt{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+#grid-3{
+    width: 350px;
+    height: 495px;
+    box-shadow: 2px 3px 10px black;
+}
+p{
+    padding: 0 1rem 0 1rem;
+    font-size: 15px;
+}
+#grid-1{
+    width: 350px ;
+    height: 400px;
+    box-shadow: 2px 3px 10px black;
+}
+#grid-6{
+    width: 270px;
+    height: 300px;
+    box-shadow: 2px 3px 10px black;
+    position: relative;
+    padding: 1rem 0 0 0;
+}
+#grid-2{
+    width: 95%;
+    height: 150px;
+    box-shadow: 2px 3px 10px black;
+}
+.title{
+    display: flex;
+    gap: 10px;
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        @media (max-width:500px) {
+
+            .login .personal-info .input,
+            .login .pass-word .input {
+                width: 100%;
+            }
+
+            .container {
+                height: 100vh;
+            }
+        }
+
+        @media (min-width:500px) {
+            .container {
+                height: 100vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div class="login">
+                <h1>Login</h1>
+                <div class="personal-info">
+                    <input type="email" class="input l-Email" id="Email" placeholder="Email" required>
+                    <span class="error"></span>
+                </div>
+                <div class="pass-word">
+                    <div class="icon">
+                        <input type="password" class="fpass" id="Password" name="password" placeholder="Password"
+                            required><i class="fa-solid fa-eye" id="icon-eye3"></i>
+                        <i class="fa-solid fa-eye-slash" id="icon-eye-slash3"></i>
+                    </div>
+                    <span class="error2"></span>
+
+                </div>
+                <button type="submit" id="Submit" onclick="check(event)">Login</button>
+                <p style="font-size: 1rem;">don't have an account? <a href="./index.html" id="link">Register</a></p>
+            </div>
+
+        </form>
+    </div>
+    <script>
+
+        function setError(id, errorMsg) {
+            let element = document.getElementById(id);
+            let errorElement = element.nextElementSibling;
+            if (errorElement && errorElement.classList.contains("error")) {
+                errorElement.innerHTML = errorMsg;
+            }
+        }  
+
+        function clearError() {
+            let errors = document.getElementsByClassName("error");
+            let errors2 = document.getElementsByClassName("error2");
+            for (let item of errors) {
+                item.innerHTML = "";
+            }
+            for (let err of errors2) {
+                err.innerHTML = '';
+            }
+        }
+
+        function validation() {
+            clearError();
+            let returnval = true;
+
+            let login = document.getElementById("Email").value;
+            let pass = document.getElementById("Password").value;
+
+            if (!(login)) {
+                setError("Email", "* Please enter a valid email address");
+                returnval = false;
+            }
+
+            if (pass.length < 8) {
+                let error = document.querySelector(".error2");
+                error.innerHTML = "* Password should be at least 8 characters long";
+                returnval = false;
+            }
+
+            return returnval;
+        }
+
+        function check(event) {
+            event.preventDefault();
+
+            if (!validation()) {
+                return false;
+            }
+
+            let login = document.getElementById("Email").value;
+            let pass = document.getElementById("Password").value;
+
+            let storedData = localStorage.getItem("user-Information");
+
+            if (!storedData) {
+                alert("No users are registered");
+                return false;
+            }
+
+            let userArray = JSON.parse(storedData);
+            let userFound = false;
+
+            for (let i = 0; i < userArray.length; i++) {
+                if (userArray[i].email === login && userArray[i].password === pass) {
+                    alert("Your login has been successfully completed.");
+                    userFound = true;
+                    break;
+                }
+            }
+
+            if (!userFound) {
+                alert("User not found");
+                return false;
+            }
+
+            return true;
+        }
+        let eyeIcon3 = document.getElementById("icon-eye3");
+        let eyeSlash3 = document.getElementById("icon-eye-slash3");
+        let password = document.getElementById("Password");
+        eyeIcon3.addEventListener("click", () => {
+            eyeIcon3.style.display = "none";
+            if (password.type == "password") {
+                password.type = "text";
+            }
+            eyeSlash3.style.display = "block";
+
+        });
+        eyeSlash3.addEventListener("click", () => {
+            eyeIcon3.style.display = "block";
+            if (password.type == "text") {
+                password.type = "password";
+            }
+            eyeSlash3.style.display = "none";
+        });
+    </script>
+</body>
+
+</html>

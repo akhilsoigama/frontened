@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+body{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 450px;
+    height: auto;
+    background-color: white;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.443),0px 5px 30px rgba(0, 0, 0, 0.288);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 1rem;
+    gap: 20px;
+    padding: 1.5rem;
+    overflow: hidden;
+}
+h1{
+    color: crimson;
+    animation: filter 2s infinite ease-in;
+}
+.inputs{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+#inp,button, .text ul{
+    height: 40px;
+    border-radius: 1rem;
+    font-size: 1rem;
+    border: none;
+    color: red;
+    cursor: pointer;
+    animation: filter 2s infinite linear;
+    box-shadow:0px 5px 20px rgba(0, 0, 0, 0.443),0px 5px 20px rgba(0, 0, 0, 0.288) ;
+}
+#inp{
+    width: 250px;
+    outline: none;
+}
+button{
+    width: 100px;
+    position: relative;
+    background-color: white;
+    z-index: 1;
+}
+button::before{
+    content: '';
+    width: 0px;
+    height: 100%;
+    background-color: rgba(217, 31, 68, 0.797);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+button:hover::before{
+    width: 100px;
+}
+button:hover{
+    color: white;  
+}
+button:active,i:active{
+    transform: scale(0.9);
+}
+tr{
+    width: 380px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow:0px 5px 20px rgba(0, 0, 0, 0.443),0px 5px 20px rgba(0, 0, 0, 0.288) ;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: red;
+    animation: filter 2s infinite linear;
+    margin: 1rem 0 0 0;
+}
+i{
+    padding-right: 10px;
+}
+
+@keyframes filter {
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+@media (max-width : 540px) {
+    .container{
+        width: 100%;
+        height: auto;
+        margin: 1rem;
+    }
+    tr{
+        width: 250px;
+        height: auto;
+        gap: 50px;
+        margin: 1rem 0 0 0;
+    }
+    #inp{
+        width: 100%;
+    }
+    table{
+        width: 100%;
+    }
+}

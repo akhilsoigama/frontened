@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(23, 21, 21, 0.299);
+    background-image: url("https://images.gludy.com/photos/0/switzerland-rivers-valley-rocks-hd-wallpaper.jpg");
+    background-size: cover;
+    background-blend-mode: darken;
+    position: relative;
+}
+
+.register,
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-direction: column;
+    color: white;
+    padding: 34px;
+    backdrop-filter: blur(3px);
+    border-radius: 1rem;
+    border: 2px solid white;
+
+}
+
+.register {
+    width: 100%;
+    height: 100%;
+}
+
+.username,
+.personal-info,
+.pass-word {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.fname,
+.lname,
+.email,
+.number,
+.cpass,
+.pass,
+.login .personal-info,
+.login .pass-word {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.error {
+    color: red;
+    padding-left: 10px;
+    font-size: 1rem;
+}
+
+.input,.icon,.fpass,.fcpass{  
+    color: white;
+    background-color: transparent;
+    outline: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+.input,.icon{
+    width: 350px; 
+    height: 40px;
+    padding: 0 0 0 8px;
+    border-bottom: 2px solid rgb(255, 252, 252);
+}
+#Submit {
+    width: 150px;
+    height: 40px;
+    background-color: crimson;
+    color: rgba(255, 255, 255, 0.792);
+    border-radius: 8px;
+    border: none;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#Submit:active {
+    transform: scale(0.8);
+}
+
+input::placeholder {
+    color: white;
+}
+
+.login {
+    width: 100%;
+    height: 80vh;
+    transition: all 0.2s c;
+}
+
+#verify {
+    width: 38.4%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    background-color: white;
+    transition: transform .4s top .4s;
+    visibility: visible;
+    border-radius: 1rem;
+}
+
+#verify i {
+    font-size: 40px;
+    color: green;
+}
+
+#verify button {
+    width: 150px;
+    height: 40px;
+    background-color: darkcyan;
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 8px;
+    letter-spacing: 2px;
+    box-shadow: 0px 5px 40px 34px rgba(143, 140, 140, 0.32);
+}
+
+#verify button:active {
+    transform: scale(0.9);
+}
+
+.error,.error2,.error3 {
+    color: red;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.login .personal-info .input {
+    width: 350px;
+}
+.icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+}
+
+#icon-eye-slash,#icon-eye-slash2,#icon-eye-slash3{
+    display: none;
+}
+.fpass,.fcpass{
+    width: 100%;
+    height: 40px;
+}
+#link{
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+}
+#link:hover{
+    color: blue;
+}
+
+@media (max-width:530px) {
+    .input,.icon {
+        width: 100%;
+    }
+
+    .container {
+        height: 100%;
+    }
+    #verify {
+        width: 95%;
+        height: 90vh;
+    }
+    
+
+}
+
+@media (min-width:530px) {
+
+    .container {
+        height: auto;
+    }
+    #verify {
+        width: 95%;
+        height: 90vh;
+    }
+
+    .input,.icon {
+        width: 350px;
+    }
+}
+
+@media (min-width:550px) {
+    #verify {
+        width: 90%;
+    }
+}
+
+@media (min-width:650px) {
+    #verify {
+        width: 75%;
+    }
+}
+
+@media (min-width:780px) {
+    #verify {
+        width: 65%;
+    }
+    .container{
+        height: 100%;
+    }
+}
+@media (min-width:790px) {
+    #verify {
+        width: 65%;
+    }
+    .container{
+        height: 100vh;
+    }
+}
+@media (min-width:900px) {
+    #verify {
+        width: 55%;
+    }
+}
+
+@media (min-width:1050px) {
+    #verify {
+        width: 45%;
+    }
+   
+}
+
+@media (min-width:1280px) {
+    #verify {
+        width: 38.5%;
+    }
+}

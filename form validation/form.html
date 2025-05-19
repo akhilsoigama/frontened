@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up page</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="sign-up">
+      <div class="h2">
+        <h2 id="title">Sign up </h2>
+        <div class="underline"></div>
+      </div>
+        <form name="myForm" onsubmit="return validateForm()" method="post">
+          <div id="name" class="align">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" placeholder="user name" name="fname"  required/><span
+              class="formerror"
+            ></span>
+          </div>
+          <div id="email" class="align">
+            <i class="fa-solid fa-at"></i>
+            <input
+              type="email"  
+              name="femail"
+              id="email"
+              placeholder="Email"
+              required
+            /><span class="formerror"></span>
+          </div>
+          <div id="pass" class="align">
+            <i class="fa-solid fa-key"></i>
+            <input type="password" placeholder="Password" name="fpass"  required/><span
+              class="formerror"
+            ></span>
+          </div>
+          <div id="cpass" class="align">
+            <i class="fa-solid fa-key"></i>
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              name="fcpass"
+              required
+            /><span class="formerror"></span>
+          </div>
+          <div class="button">
+          <input type="submit" value="Sign Up" id="btn">
+          <input type="submit" value="Sign in" id="btn2" style="background-color: none;">
+        </div>
+        </form>
+      </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./form.js"></script>
+</body>
+</html>
